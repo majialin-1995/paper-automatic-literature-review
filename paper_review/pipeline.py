@@ -1,26 +1,32 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 from .classification import CategoryAssigner
 from .exporters.markdown import export_markdown
-from .models import PaperEntry
+from .models import CategoryNode, PaperEntry
 from .parsing import registry
-from .schema import build_simple_auto_schema, load_schema_from_yaml, suggest_schema_from_papers_auto
+from .schema import DefaultSchemaBuilder, SchemaBuilder
 from .summarization.base import Summarizer
 
 
 class ReviewPipeline:
     """High-level orchestration for generating structured literature reviews."""
 
-    def __init__(self, summarizer: Summarizer, category_assigner: CategoryAssigner) -> None:
+    def __init__(
+        self,
+        summarizer: Summarizer,
+        category_assigner: CategoryAssigner,
+        schema_builder: Optional[SchemaBuilder] = None,
+    ) -> None:
         if summarizer is None:
             raise ValueError("必须提供基于大模型的 summarizer 实例。")
         if category_assigner is None:
             raise ValueError("必须提供基于大模型的分类器实例。")
         self.summarizer = summarizer
         self.category_assigner = category_assigner
+        self.schema_builder = schema_builder or DefaultSchemaBuilder()
 
     def parse(self, source: Path) -> List[PaperEntry]:
         parser = registry.get(source.suffix)
@@ -38,15 +44,8 @@ class ReviewPipeline:
         categories_yaml: Optional[Path],
         n_main: Optional[int],
         m_sub: Optional[int],
-    ):
-        if categories_yaml is not None:
-            print(f"使用 YAML 定义的类别结构: {categories_yaml}")
-            return load_schema_from_yaml(categories_yaml)
-        if n_main is None and m_sub is None:
-            print("未提供 YAML 和自动构造参数，使用兜底类别结构。")
-            return build_simple_auto_schema()
-        print(f"未提供 YAML，使用数字参数自动构造 schema：n_main={n_main}, m_sub={m_sub}")
-        return suggest_schema_from_papers_auto(papers, n_main, m_sub)
+    ) -> Dict[str, CategoryNode]:
+        return self.schema_builder.build(papers, categories_yaml, n_main, m_sub)
 
     def run(
         self,
