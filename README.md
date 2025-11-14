@@ -12,8 +12,13 @@
 ## 快速开始
 
 ```bash
+# 1. 安装依赖
 pip install -r requirements.txt
-export DEEPSEEK_API_KEY="sk-xxx"  # 或使用 OPENAI_API_KEY
+
+# 2. 配置大模型 API Key（DeepSeek 或 OpenAI 二选一）
+export DEEPSEEK_API_KEY="sk-xxx"   # 或设置 OPENAI_API_KEY
+
+# 3. 准备输入 RIS 文件并运行管线
 python main.py \
   --input examples/papers.ris \
   --out-dir runs/review \
@@ -25,6 +30,15 @@ python main.py \
 执行完成后，会在 `runs/review/review.md` 中生成分层综述草稿。
 
 > **提示**：若提供 `--categories categories.yaml`，将优先使用该文件定义的大类/小类结构。
+
+### 运行流程说明
+
+1. **解析输入**：`paper_review/parsing/ris.py` 会读取 `.ris` 文件并转换为内部的 `Paper` 数据结构。
+2. **自动分类**：`paper_review/classification.py` 调用 LLM，基于自带或自定义类别定义为文献打上主类/子类。
+3. **生成摘要**：`paper_review/summarization/` 下的模型生成结构化摘要内容。
+4. **Markdown 导出**：`paper_review/exporters/markdown.py` 将分层信息渲染到 `review.md`。
+
+目前项目仅输出 Markdown 综述，不包含 `.ris` 转 CSV 的列表导出能力；若需要表格形式，可在导出的 `review.md` 基础上自行转换或扩展新的导出器。
 
 ## 项目结构
 
