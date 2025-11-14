@@ -6,18 +6,20 @@
 
 - ✅ 支持解析 `.ris` 文献引用文件，并可按需扩展到其它格式。
 - ✅ 依据 YAML 或自动生成的大类/小类结构输出分层 Markdown 草稿。
-- ✅ 预留 LLM 摘要接口，默认为模板摘要，也可无缝接入 DeepSeek-chat。
+- ✅ 摘要与分类全程由大模型驱动，内置 DeepSeek-chat 接入示例。
 - ✅ 完整的命令行接口，便于在自动化流程中集成。
 
 ## 快速开始
 
 ```bash
-pip install -r requirements.txt  # 若仅使用模板摘要，可跳过
+pip install -r requirements.txt
+export DEEPSEEK_API_KEY="sk-xxx"  # 或使用 OPENAI_API_KEY
 python main.py \
   --input examples/papers.ris \
   --out-dir runs/review \
   --n-main 3 --m-sub 2 \
-  --sort-by-year desc
+  --sort-by-year desc \
+  --llm-model deepseek-chat
 ```
 
 执行完成后，会在 `runs/review/review.md` 中生成分层综述草稿。
@@ -29,7 +31,7 @@ python main.py \
 ```
 paper_review/
 ├── cli.py                  # 命令行解析与入口
-├── classification.py       # 文献分类逻辑（当前为占位实现）
+├── classification.py       # 文献分类逻辑（仅 LLM 实现）
 ├── exporters/markdown.py   # Markdown 导出
 ├── models.py               # 核心数据结构
 ├── parsing/                # 书目文件解析器
@@ -37,7 +39,7 @@ paper_review/
 │   └── ris.py              # RIS 解析实现
 ├── pipeline.py             # Pipeline 编排
 └── summarization/          # 摘要生成模块
-    ├── base.py             # 摘要抽象类 & 模板实现
+    ├── base.py             # 摘要抽象类
     └── deepseek.py         # DeepSeek-chat 摘要实现
 ```
 
@@ -45,25 +47,42 @@ paper_review/
 
 ## DeepSeek-chat 摘要
 
-`paper_review/summarization/deepseek.py` 提供了一个 `DeepSeekSummarizer`，基于用户提供的 `OpenAI`/`deepseek` 客户端调用 DeepSeek-chat 生成摘要。实现遵循以下约束：
+`paper_review/summarization/deepseek.py` 提供了 `DeepSeekSummarizer`，基于用户提供的 `OpenAI`/`deepseek` 客户端调用大模型生成“XXX等人……针对……”风格摘要。实现遵循以下约束：
 
-- 直接执行一次模型调用，不再根据 token 上限回退重试。
-- 强制要求模型返回 JSON，并通过 `Summary`（Pydantic 或数据类）进行结构化校验。
-- 在模型调用失败时，自动回退到模板摘要，保证流程可用性。
+- 单次模型调用产出结构化 JSON，再经由 `Summary`（Pydantic 或数据类）校验。
+- 失败时抛出 `SummaryFailed` 异常，由调用方决定重试策略，不再回退模板语句。
 
 使用方式示例：
 
 ```python
 from openai import OpenAI
 from paper_review.pipeline import ReviewPipeline
+from paper_review.classification import LLMCategoryAssigner
 from paper_review.summarization.deepseek import DeepSeekSummarizer
 
 client = OpenAI(api_key="<your-key>")
-pipeline = ReviewPipeline(summarizer=DeepSeekSummarizer(client))
+pipeline = ReviewPipeline(
+    summarizer=DeepSeekSummarizer(client, model="deepseek-chat"),
+    category_assigner=LLMCategoryAssigner(client, model="deepseek-chat"),
+)
 pipeline.run(source=Path("papers.ris"), out_dir=Path("runs/review"))
 ```
 
-> **依赖**：若需要 LLM 摘要，请确保安装 `openai>=1.0`（或 DeepSeek 官方 SDK）以及 `pydantic`。
+> **依赖**：若需要 LLM 摘要/分类，请确保安装 `openai>=1.0`（或 DeepSeek 官方 SDK）以及 `pydantic`。
+
+## DeepSeek-chat 分类
+
+`paper_review/classification.py` 提供 `LLMCategoryAssigner`，利用与摘要相同的客户端按照 schema 给出主/子类预测。使用示例：
+
+```python
+from openai import OpenAI
+from paper_review.classification import LLMCategoryAssigner
+
+client = OpenAI(api_key="<your-key>")
+category_assigner = LLMCategoryAssigner(client, model="deepseek-chat")
+```
+
+分类失败会抛出 `ClassificationFailed`，调用方可捕获后自行决定重试或人工介入。
 
 ## 扩展指南
 
@@ -72,7 +91,7 @@ pipeline.run(source=Path("papers.ris"), out_dir=Path("runs/review"))
    - 在模块底部通过 `registry.register(".bib", CustomParser())` 注册。
 
 2. **自定义分类器**
-   - 替换 `classification.py` 中的 `assign_categories` 实现，或新增策略类。
+   - 继承 `CategoryAssigner`，实现自定义的 `assign` 方法，并通过 `ReviewPipeline(category_assigner=...)` 注入。
 
 3. **接入其它摘要模型**
    - 继承 `Summarizer`，实现 `summarize` 方法，并注入到 `ReviewPipeline`。
@@ -80,5 +99,5 @@ pipeline.run(source=Path("papers.ris"), out_dir=Path("runs/review"))
 ## 开发说明
 
 - Python 版本建议 >= 3.9。
-- 模板摘要与 RIS 解析均为纯标准库实现，便于快速启动。
+- RIS 解析均为纯标准库实现，便于快速启动。
 - 可在 `tests/` 或 `examples/` 目录（待创建）中补充样例，便于回归验证。
