@@ -118,6 +118,7 @@ class LLMCategoryAssigner(CategoryAssigner):
         mapping: Dict[str, List[str]],
     ) -> CategorySelection:
         prompt = _build_prompt(schema_text, paper)
+        print("\n🤖 分类请求 Prompt:\n" + prompt + "\n")
         response = self.client.chat.completions.create(
             model=self.model,
             messages=[
@@ -128,9 +129,16 @@ class LLMCategoryAssigner(CategoryAssigner):
             stream=False,
         )
         content = response.choices[0].message.content or ""
+        print("📨 模型返回 (分类)：\n" + content + "\n")
         data = _extract_json(content) or {}
         main = _match_choice(str(data.get("main_category", "")), mapping.keys())
         sub = None
         if main is not None:
             sub = _match_choice(str(data.get("sub_category", "")), mapping.get(main, []))
+        print(
+            "📊 分类结果: 主类="
+            + (main or "未匹配")
+            + ", 子类="
+            + (sub or "未匹配")
+        )
         return CategorySelection(main=main, sub=sub)
