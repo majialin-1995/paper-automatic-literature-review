@@ -3,19 +3,24 @@ from __future__ import annotations
 from pathlib import Path
 from typing import List, Optional
 
-from .classification import assign_categories
+from .classification import CategoryAssigner
 from .exporters.markdown import export_markdown
 from .models import PaperEntry
 from .parsing import registry
 from .schema import build_simple_auto_schema, load_schema_from_yaml, suggest_schema_from_papers_auto
-from .summarization.base import Summarizer, TemplateSummarizer
+from .summarization.base import Summarizer
 
 
 class ReviewPipeline:
     """High-level orchestration for generating structured literature reviews."""
 
-    def __init__(self, summarizer: Optional[Summarizer] = None) -> None:
-        self.summarizer = summarizer or TemplateSummarizer()
+    def __init__(self, summarizer: Summarizer, category_assigner: CategoryAssigner) -> None:
+        if summarizer is None:
+            raise ValueError("必须提供基于大模型的 summarizer 实例。")
+        if category_assigner is None:
+            raise ValueError("必须提供基于大模型的分类器实例。")
+        self.summarizer = summarizer
+        self.category_assigner = category_assigner
 
     def parse(self, source: Path) -> List[PaperEntry]:
         parser = registry.get(source.suffix)
@@ -57,7 +62,7 @@ class ReviewPipeline:
 
         papers = self.parse(source)
         schema = self.build_schema(papers, categories_yaml, n_main, m_sub)
-        assign_categories(papers, schema)
+        self.category_assigner.assign(papers, schema)
         self.summarize(papers)
         export_markdown(papers, schema, out_md, sort_by_year=sort_by_year)
         print(f"\n✅ 已导出 Markdown 到: {out_md}")
