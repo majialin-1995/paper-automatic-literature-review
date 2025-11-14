@@ -6,6 +6,7 @@ from dataclasses import dataclass
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 from .models import CategoryNode, PaperEntry
+from .progress import ProgressReporter
 
 
 @dataclass(frozen=True)
@@ -94,6 +95,12 @@ class LLMCategoryAssigner(CategoryAssigner):
         schema_text, mapping = _format_schema(schema)
         if not mapping:
             raise ClassificationFailed("schema 中缺少大类定义，无法完成模型分类。")
+        if not papers:
+            return
+
+        progress = ProgressReporter(total_steps=len(papers))
+        progress.start(f"开始分类 {len(papers)} 篇文献。")
+
         for paper in papers:
             try:
                 selection = self._classify_single(paper, schema_text, mapping)
@@ -101,15 +108,20 @@ class LLMCategoryAssigner(CategoryAssigner):
                 raise ClassificationFailed(str(exc)) from exc
 
             if selection.main is None:
-                raise ClassificationFailed(
-                    f"模型未返回有效主类：{paper.title or paper.first_author}"
-                )
+                title = paper.title or paper.first_author
+                print(f"⚠️ 模型未返回有效主类，已跳过：{title}")
+                paper.main_category = None
+                paper.sub_category = None
+                progress.advance(f"跳过：{title}")
+                continue
 
             paper.main_category = selection.main
             if selection.sub and selection.sub in mapping.get(selection.main, []):
                 paper.sub_category = selection.sub
             else:
                 paper.sub_category = None
+
+            progress.advance(f"完成分类：{paper.title or paper.first_author}")
 
     def _classify_single(
         self,
