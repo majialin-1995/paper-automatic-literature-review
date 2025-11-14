@@ -103,6 +103,7 @@ def normalize_summary(raw_json: Dict[str, Any]) -> Summary:
 def summarize(text: str, client: Any, *, model: str = "deepseek-chat") -> Summary:
     """调用 DeepSeek-chat 完成一次摘要，若解析失败则抛出 :class:`SummaryFailed`."""
     prompt = _PROMPT_HEADER + text
+    print("\n🧠 摘要请求 Prompt:\n" + prompt + "\n")
     response = client.chat.completions.create(
         model=model,
         messages=[
@@ -113,6 +114,7 @@ def summarize(text: str, client: Any, *, model: str = "deepseek-chat") -> Summar
         stream=False,
     )
     content = response.choices[0].message.content or ""
+    print("📨 模型返回 (摘要)：\n" + content + "\n")
     raw_json = _extract_json(content) or {}
     return normalize_summary(raw_json)
 
@@ -128,6 +130,8 @@ class DeepSeekSummarizer(Summarizer):
         text = f"标题：{paper.title}\n作者：{', '.join(paper.authors)}\n摘要：{paper.abstract}"
         try:
             summary = summarize(text, self.client, model=self.model)
-            return summary.render(paper)
+            rendered = summary.render(paper)
+            print("📝 摘要结果：" + rendered + "\n")
+            return rendered
         except Exception as exc:  # pragma: no cover - depends on API availability
             raise SummaryFailed(str(exc)) from exc

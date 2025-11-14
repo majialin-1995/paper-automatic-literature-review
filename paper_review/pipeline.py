@@ -7,6 +7,7 @@ from .classification import CategoryAssigner
 from .exporters.markdown import export_markdown
 from .models import CategoryNode, PaperEntry
 from .parsing import registry
+from .progress import ProgressReporter
 from .schema import DefaultSchemaBuilder, SchemaBuilder
 from .summarization.base import Summarizer
 
@@ -59,10 +60,22 @@ class ReviewPipeline:
         out_dir.mkdir(parents=True, exist_ok=True)
         out_md = out_dir / "review.md"
 
+        progress = ProgressReporter(total_steps=5)
+        progress.start("🚀 开始自动文献综述流程，共 5 个步骤。")
+
         papers = self.parse(source)
+        progress.advance("解析文献源文件")
+
         schema = self.build_schema(papers, categories_yaml, n_main, m_sub)
+        progress.advance("构建分类体系")
+
         self.category_assigner.assign(papers, schema)
+        progress.advance("调用模型完成分类")
+
         self.summarize(papers)
+        progress.advance("生成中文摘要")
+
         export_markdown(papers, schema, out_md, sort_by_year=sort_by_year)
+        progress.advance("导出 Markdown 报告")
         print(f"\n✅ 已导出 Markdown 到: {out_md}")
         return out_md
