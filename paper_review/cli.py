@@ -56,7 +56,7 @@ def build_argparser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--llm-api-base",
         type=str,
-        default=None,
+        default="https://api.deepseek.com",
         help="自定义 LLM 接口地址，可通过 DEEPSEEK_API_BASE/OPENAI_BASE_URL 指定。",
     )
     parser.add_argument(
