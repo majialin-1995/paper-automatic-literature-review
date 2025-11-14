@@ -12,6 +12,7 @@ except ImportError:  # pragma: no cover - graceful fallback when SDK is missing
 
 from .classification import LLMCategoryAssigner
 from .pipeline import ReviewPipeline
+from .schema import LLMSchemaBuilder
 from .summarization.deepseek import DeepSeekSummarizer
 
 
@@ -75,6 +76,7 @@ def run_cli(args: Optional[argparse.Namespace] = None) -> Path:
     pipeline = ReviewPipeline(
         summarizer=DeepSeekSummarizer(client, model=parsed.llm_model),
         category_assigner=LLMCategoryAssigner(client, model=parsed.llm_model),
+        schema_builder=LLMSchemaBuilder(client, model=parsed.llm_model),
     )
     return pipeline.run(
         source=parsed.input,
