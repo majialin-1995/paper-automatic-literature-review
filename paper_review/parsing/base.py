@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from abc import ABC, abstractmethod
 from pathlib import Path
-from typing import List
+from typing import List, Set
 
 from ..models import PaperEntry
 
@@ -16,19 +16,29 @@ class BibliographyParser(ABC):
 
 
 class ParserRegistry:
-    """Simple registry used to map file extensions to parser implementations."""
+    """Registry used to map format names (or aliases) to parser implementations."""
 
     def __init__(self) -> None:
-        self._parsers = {}
+        self._parsers: dict[str, BibliographyParser] = {}
+        self._primary_names: Set[str] = set()
 
-    def register(self, suffix: str, parser: BibliographyParser) -> None:
-        self._parsers[suffix.lower()] = parser
+    def register(self, name: str, parser: BibliographyParser, *, primary: bool = False) -> None:
+        key = name.lower()
+        self._parsers[key] = parser
+        if primary:
+            self._primary_names.add(key)
 
-    def get(self, suffix: str) -> BibliographyParser:
-        normalized = suffix.lower()
+    def get(self, name: str) -> BibliographyParser:
+        normalized = name.lower()
         if normalized not in self._parsers:
-            raise ValueError(f"没有找到与扩展名 {suffix} 对应的解析器。")
+            available = ", ".join(sorted(self.available_formats())) or "无可用解析器"
+            raise ValueError(f"没有找到名为 {name} 的解析器，可选值: {available}。")
         return self._parsers[normalized]
+
+    def available_formats(self) -> List[str]:
+        if self._primary_names:
+            return sorted(self._primary_names)
+        return sorted(self._parsers)
 
 
 registry = ParserRegistry()

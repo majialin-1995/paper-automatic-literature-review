@@ -1,0 +1,19 @@
+RT Journal Article
+SR Electronic(1)
+ID 1
+T1 Deep Learning for Cats
+JF Journal of Feline Research
+A1 Doe, Jane
+A1 Smith, John
+YR 2023
+AB Explores convolutional networks for cat image recognition.
+
+RT Conference Proceeding
+SR Electronic(1)
+ID 2
+T1 Efficient Mouse Tracking
+T2 Proceedings of the Rodent Tech Symposium
+A1 Brown, Charlie
+A1 Green, Pat
+YR 2021
+AB Presents a lightweight tracking algorithm for laboratory mice.

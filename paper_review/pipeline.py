@@ -29,8 +29,9 @@ class ReviewPipeline:
         self.category_assigner = category_assigner
         self.schema_builder = schema_builder or DefaultSchemaBuilder()
 
-    def parse(self, source: Path) -> List[PaperEntry]:
-        parser = registry.get(source.suffix)
+    def parse(self, source: Path, input_format: Optional[str] = None) -> List[PaperEntry]:
+        parser_key = input_format or source.suffix
+        parser = registry.get(parser_key)
         papers = parser.parse(source)
         print(f"解析 {source.name} 完成，共 {len(papers)} 篇文献。")
         return papers
@@ -56,6 +57,7 @@ class ReviewPipeline:
         n_main: Optional[int] = None,
         m_sub: Optional[int] = None,
         sort_by_year: str = "none",
+        input_format: Optional[str] = None,
     ) -> Path:
         out_dir.mkdir(parents=True, exist_ok=True)
         out_md = out_dir / "review.md"
@@ -63,7 +65,7 @@ class ReviewPipeline:
         progress = ProgressReporter(total_steps=5)
         progress.start("🚀 开始自动文献综述流程，共 5 个步骤。")
 
-        papers = self.parse(source)
+        papers = self.parse(source, input_format=input_format)
         progress.advance("解析文献源文件")
 
         schema = self.build_schema(papers, categories_yaml, n_main, m_sub)

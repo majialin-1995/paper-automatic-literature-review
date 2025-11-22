@@ -1,10 +1,10 @@
 # paper-automatic-literature-review
 
-通过 RIS 等书目文件自动形成分层的国内外研究现状总结。
+通过 RIS、RefWorks 等书目文件自动形成分层的国内外研究现状总结。
 
 ## 功能亮点
 
-- ✅ 支持解析 `.ris` 文献引用文件，并可按需扩展到其它格式。
+- ✅ 支持解析 `.ris` 与 RefWorks `.txt`/`.refworks` 文献引用文件，并可按需扩展到其它格式。
 - ✅ 依据 YAML 或大模型自动归纳的大类/小类结构输出分层 Markdown 草稿。
 - ✅ 摘要与分类全程由大模型驱动，内置 DeepSeek-chat 接入示例。
 - ✅ 完整的命令行接口，便于在自动化流程中集成。
@@ -18,12 +18,20 @@ pip install -r requirements.txt
 # 2. 配置大模型 API Key（DeepSeek 或 OpenAI 二选一）
 export DEEPSEEK_API_KEY="sk-xxx"   # 或设置 OPENAI_API_KEY
 
-# 3. 准备输入 RIS 文件并运行管线
+# 3. 准备输入 RIS/RefWorks 文件并运行管线
 python main.py \
   --input examples/papers.ris \
   --out-dir runs/review \
   --n-main 3 --m-sub 2 \
   --sort-by-year desc \
+  --llm-model deepseek-chat
+
+# RefWorks 导出通常以 `.txt` 或 `.refworks` 结尾，可通过参数指定格式：
+python main.py \
+  --input examples/papers_refworks.txt \
+  --out-dir runs/review \
+  --sort-by-year desc \
+  --input-format refworks \
   --llm-model deepseek-chat
 
 python main.py --input examples/papers.ris --out-dir runs/review --categories examples/categories.yaml --sort-by-year desc --llm-model deepseek-chat
@@ -33,9 +41,14 @@ python main.py --input examples/papers.ris --out-dir runs/review --categories ex
 
 > **提示**：若提供 `--categories categories.yaml`，将优先使用该文件定义的大类/小类结构。
 
+### 输入格式选择
+
+- 通过 `--input-format` 显式指定书目格式（支持 `ris`、`refworks`），避免因文件后缀不规范导致识别失败。
+- 未显式指定时，会根据文件后缀自动匹配已注册的解析器（如 `.ris`、`.refworks`、`.txt`）。
+
 ### 运行流程说明
 
-1. **解析输入**：`paper_review/parsing/ris.py` 会读取 `.ris` 文件并转换为内部的 `Paper` 数据结构。
+1. **解析输入**：`paper_review/parsing/ris.py` / `paper_review/parsing/refworks.py` 会读取 `.ris` 或 RefWorks 文件并转换为内部的 `Paper` 数据结构。
 2. **推断类别结构**：若未提供 `categories.yaml`，`paper_review/schema.py` 中的 `LLMSchemaBuilder` 会汇总整个 RIS 内容并调用大模型推导主类/子类名称，必要时可根据 `--n-main/--m-sub` 控制数量。
 3. **自动分类与摘要**：`paper_review/classification.py` 和 `paper_review/summarization/` 下的模型分别调用 LLM 为文献打上主/子类并生成结构化摘要。
 4. **Markdown 导出**：`paper_review/exporters/markdown.py` 将分层信息渲染到 `review.md`。
@@ -52,6 +65,7 @@ paper_review/
 ├── models.py               # 核心数据结构
 ├── parsing/                # 书目文件解析器
 │   ├── base.py             # Parser 抽象类与注册表
+│   ├── refworks.py         # RefWorks 解析实现
 │   └── ris.py              # RIS 解析实现
 ├── schema.py               # 类别结构定义与 LLM 推断
 ├── pipeline.py             # Pipeline 编排
@@ -105,7 +119,7 @@ category_assigner = LLMCategoryAssigner(client, model="deepseek-chat")
 
 1. **新增解析器（如 `.bib`）**
    - 在 `paper_review/parsing/` 目录下创建新模块，继承 `BibliographyParser`。
-   - 在模块底部通过 `registry.register(".bib", CustomParser())` 注册。
+   - 在模块底部通过 `registry.register("bib", CustomParser(), primary=True)` 注册格式名，并按需额外注册文件后缀（如 `registry.register(".bib", CustomParser())`）。
 
 2. **自定义分类器**
    - 继承 `CategoryAssigner`，实现自定义的 `assign` 方法，并通过 `ReviewPipeline(category_assigner=...)` 注入。

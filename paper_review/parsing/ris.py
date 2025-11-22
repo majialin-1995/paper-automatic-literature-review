@@ -87,7 +87,9 @@ class RISParser(BibliographyParser):
 
 
 def register_parser() -> None:
-    registry.register(".ris", RISParser())
+    parser = RISParser()
+    registry.register("ris", parser, primary=True)
+    registry.register(".ris", parser)
 
 
 register_parser()
