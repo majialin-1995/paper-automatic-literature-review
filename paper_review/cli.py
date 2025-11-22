@@ -12,6 +12,7 @@ except ImportError:  # pragma: no cover - graceful fallback when SDK is missing
 
 from .classification import LLMCategoryAssigner
 from .pipeline import ReviewPipeline
+from .parsing import registry
 from .schema import LLMSchemaBuilder
 from .summarization.deepseek import DeepSeekSummarizer
 
@@ -65,6 +66,13 @@ def build_argparser() -> argparse.ArgumentParser:
         default="deepseek-chat",
         help="用于摘要与分类的对话模型名称，默认为 deepseek-chat。",
     )
+    parser.add_argument(
+        "--input-format",
+        type=str,
+        default=None,
+        choices=registry.available_formats(),
+        help="书目文件格式（如 ris/refworks），若不指定则根据文件后缀自动检测。",
+    )
     return parser
 
 
@@ -85,6 +93,7 @@ def run_cli(args: Optional[argparse.Namespace] = None) -> Path:
         n_main=parsed.n_main,
         m_sub=parsed.m_sub,
         sort_by_year=parsed.sort_by_year,
+        input_format=parsed.input_format,
     )
 
 
