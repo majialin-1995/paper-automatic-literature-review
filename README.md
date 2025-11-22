@@ -25,6 +25,8 @@ python main.py \
   --n-main 3 --m-sub 2 \
   --sort-by-year desc \
   --llm-model deepseek-chat
+
+python main.py --input examples/papers.ris --out-dir runs/review --categories examples/categories.yaml --sort-by-year desc --llm-model deepseek-chat
 ```
 
 执行完成后，会在 `runs/review/review.md` 中生成分层综述草稿。
