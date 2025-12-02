@@ -52,8 +52,8 @@ class ReviewPipeline:
     def run(
         self,
         source: Optional[Path],
-        categorized_dir: Optional[Path] = None,
         out_dir: Path,
+        categorized_dir: Optional[Path] = None,
         categories_yaml: Optional[Path] = None,
         n_main: Optional[int] = None,
         m_sub: Optional[int] = None,

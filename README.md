@@ -32,7 +32,8 @@ python main.py \
   --out-dir runs/review \
   --sort-by-year desc \
   --input-format refworks \
-  --llm-model deepseek-chat
+  --llm-model deepseek-chat \
+  --categories categories.yaml
 
 python main.py --input examples/papers.ris --out-dir runs/review --categories examples/categories.yaml --sort-by-year desc --llm-model deepseek-chat
 

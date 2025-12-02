@@ -56,13 +56,7 @@ def export_markdown(
 
             items_sorted = sorted(items, key=sort_key, reverse=reverse)
             for paper in items_sorted:
-                authors_str = ", ".join(paper.authors) if paper.authors else paper.first_author
-                year_str = str(paper.year) if paper.year is not None else "n.d."
-                venue_str = paper.venue or ""
-                basic_info = f"{authors_str} ({year_str})"
-                if venue_str:
-                    basic_info += f", *{venue_str}*"
-                lines.append(f"- **{basic_info}**  \n  {paper.summary_zh}")
+                lines.append(f"- {paper.summary_zh}")
 
             summary_para = _build_subcategory_summary(heading, items)
             lines.append("\n" + summary_para + "\n")
@@ -74,13 +68,7 @@ def export_markdown(
         lines.append(overview + "\n")
 
         for paper in items_sorted:
-            authors_str = ", ".join(paper.authors) if paper.authors else paper.first_author
-            year_str = str(paper.year) if paper.year is not None else "n.d."
-            venue_str = paper.venue or ""
-            basic_info = f"{authors_str} ({year_str})"
-            if venue_str:
-                basic_info += f", *{venue_str}*"
-            lines.append(f"- **{basic_info}**  \n  {paper.summary_zh}")
+            lines.append(f"- {paper.summary_zh}")
 
         summary_para = _build_subcategory_summary("未指定小类", items_sorted)
         lines.append("\n" + summary_para + "\n")

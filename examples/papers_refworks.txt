@@ -1,19 +1,1343 @@
 RT Journal Article
-SR Electronic(1)
-ID 1
-T1 Deep Learning for Cats
-JF Journal of Feline Research
-A1 Doe, Jane
-A1 Smith, John
-YR 2023
-AB Explores convolutional networks for cat image recognition.
+SR 1
+A1 谢秀煌;俞炅旻;符栋梁;高伟
+AD 江苏大学计算机科学与通信工程学院;上海船舶设备研究所;
+T1 基于多域特征融合和迁移学习的跨机器轴承故障诊断方法
+JF 哈尔滨工程大学学报
+OP 1-11
+K1 轴承故障诊断;跨机器;领域自适应;迁移学习;LoRA;多域特征融合;格拉姆角场;希尔伯特变换
+AB 异构数据分布引发的显著领域偏移问题严重制约了轴承故障诊断模型在跨域场景中的适应性，尤其在跨不同机器的故障诊断任务中表现尤为突出。本文提出一种多域特征融合迁移学习网络，通过知识迁移提升模型在目标域机器上的泛化能力。该模型创新性地采用主干网络参数冻结与低秩自适应相结合的优化策略，以提升参数更新效率并避免全网络微调所带来的计算开销。此外，提出基于希尔伯特变换与格拉姆角场的多模态特征融合方法，该方法通过联合分析解析信号及稳态-瞬态特征，构建具有更强判别性的复合故障特征表征。本文通过3个独立数据集构建的6组跨机器诊断任务验证表明，所提方法的平均准确率最高达98.5%，在多数任务中显著优于多种现有最新方法且可训练参数量较传统全参数微调减少90%以上。实验结果表明MDFF-TLN具备良好的跨机器泛化能力，适用于跨域条件下的工业故障诊断场景。本文研究可为制造装备的预测维护提供高鲁棒性解决方案。
+SN 1006-7043
+CN 23-1390/U
+LA 中文
+DS CNKI
+LK https://link.cnki.net/urlid/23.1390.u.20251128.1519.008
 
-RT Conference Proceeding
-SR Electronic(1)
-ID 2
-T1 Efficient Mouse Tracking
-T2 Proceedings of the Rodent Tech Symposium
-A1 Brown, Charlie
-A1 Green, Pat
-YR 2021
-AB Presents a lightweight tracking algorithm for laboratory mice.
+RT Journal Article
+SR 1
+A1 Chaoge Wang;Xinyu Tian;Funa Zhou;Hamid Reza Karimi
+AD School of Logistics Engineering, Shanghai Maritime University, Shanghai 201306, China;Department of Mechanical Engineering, Politecnico di Milano, Milan 20156, Italy
+T1 Intelligent fault diagnosis of bearings based on unsupervised domain adaptive adversarial graph neural network under variable operating conditions
+JF Measurement
+YR 2026
+IS PB
+vo 259
+OP 119697-119697
+K1 Unsupervised Domain Adaptive;Variable Working Conditions;Graph Attention Network;Across Domains;Across Devices
+AB In practical industrial diagnostic scenarios, there is often a significant lack of labeled information for equipment fault samples. Additionally, dynamic changes in operating parameters cause shifts in the spatial distribution of sample features, resulting in a dual challenge of label scarcity and time-varying data distribution. The existing unsupervised domain adaptation framework relies on a single supervised signal mechanism, making it difficult to effectively address the challenges in dynamic migration scenarios. Consequently, the paper introduces an unsupervised domain adaptive adversarial graph neural network, known as UDGAT, which fuses three key information sources into the model: specific class labels, domain labels, and data structure de tails. The class and domain label information are respectively handled by classifiers and domain discriminators. The proposed framework extracts input signal features from the data structure information using a variational autoencoder (VAE). Subsequently, the extrac...
+SN 0263-2241
+DS CNKI
+LK https://link.cnki.net/doi/10.1016/J.MEASUREMENT.2025.119697
+DO 10.1016/J.MEASUREMENT.2025.119697
+
+RT Journal Article
+SR 1
+A1 Chen Liu;Runshan Hu;Xuan Fang;Weibin Luo;Chenyang Zhu
+AD School of Internet of Things Engineering,Wuxi Taihu University,214064,Wuxi,China;School of Computer Engineering,Jimei University,361021,Xiamen,China;School of Computer Science and Artificial Intelligence,Changzhou University,213000,Changzhou,China;Department of Electronics and Computer Science,University of Southampton,SO17 1BJ,Southampton,UK
+T1 Enhancing unsupervised bearing fault diagnosis through structured prediction in latent subspace
+JF Scientific Reports
+YR 2025
+IS 1
+vo 15
+OP 42146-42146
+AB Fault diagnosis techniques are essential for preventing equipment failures, reducing maintenance costs, and enhancing operational efficiency by promptly identifying anomalies. The widespread deployment of industrial sensors has significantly increased the availability of machinery data, facilitating extensive research in data-driven fault diagnosis. However, real-world datasets frequently exhibit label scarcity and severe class imbalance, where fault instances are substantially fewer than normal samples. To address these challenges, this study proposes a robust unsupervised domain adaptation framework that synthesizes fault signals by interpolating real healthy samples with domain-specific knowledge. Although this synthetic augmentation effectively expands training data, the resulting distribution often deviates from actual fault scenarios, limiting model generalizability. To alleviate this domain discrepancy, our framework incorporates Conditional Domain-Adversarial Networks (CDAN) for domain-invariant featu...
+DS CNKI
+LK https://link.cnki.net/doi/10.1038/S41598-025-26013-0
+DO 10.1038/S41598-025-26013-0
+
+RT Journal Article
+SR 1
+A1 康津;马萍;张宏立;王聪;李新凯
+AD 新疆大学电气工程学院;新疆大学智能科学与技术学院;
+T1 基于联邦域泛化的未知工况下滚动轴承故障诊断框架
+JF 振动与冲击
+YR 2025
+IS 21
+vo 44
+OP 316-326
+K1 故障诊断;未知工况;联邦域泛化;元学习;知识蒸馏
+AB 在实际应用中，受潜在利益冲突与数据保密协议的限制，基于领域泛化的故障诊断模型在确保数据隐私的前提下实现高效泛化仍面临诸多挑战。联邦学习作为一种保护数据隐私的分布式协同训练机制，为智能诊断提供了新思路。然而，因设备运行工况复杂多变，采集到的数据往往局限于部分工况，当将联邦训练得到的全局模型部署至未参与训练的新客户端时，其性能显著下降。为解决上述问题，提出了一种融合元学习与知识蒸馏的联邦域泛化框架。该框架在本地模型的构建中引入混合风格层和实例-批量归一化网络模块，增强模型领域不变性的同时加快网络收敛。在本地训练前，通过元学习快速适应新任务，并通过更新模型实现不同客户端间的泛化。此外，利用全局模型与本地模型之间的知识蒸馏技术，提升模型压缩效果的同时，进一步增强模型的适应能力。模型通过联邦学习在多个源域客户端上协同训练，并在不可见的目标域中进行部署测试。试验结果表明，所提方法在保护数据隐私的同时，显著提升了故障诊断模型在未知工况下的适应性与准确性。
+SN 1000-3835
+CN 31-1316/TU
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.13465/j.cnki.jvs.2025.21.032
+DO 10.13465/j.cnki.jvs.2025.21.032
+
+RT Journal Article
+SR 1
+A1 黄友锐;戴宇
+AD 安徽理工大学电气与信息工程学院;安徽工程大学电气工程学院;
+T1 基于多尺度图卷积神经网络的域自适应轴承故障诊断方法
+JF 重庆工商大学学报(自然科学版)
+OP 1-13
+K1 轴承;故障诊断;域自适应;多尺度;域对齐
+AB 【目的】针对现有域自适应方法在轴承故障诊断中难以提取细微特征、单一度量函数不足以全面刻画源域与目标域间复杂特征关系的问题，提出了一种基于多尺度图卷积神经网络的域自适应诊断方法，以提升跨工况条件下的诊断精度与鲁棒性。【方法】首先，构建三级特征提取架构：拉普拉斯卷积层通过引入局部敏感核函数，不仅能够捕获故障信号的瞬态特征，而且能够对信号的局部变化进行精准响应，从而有效提取故障信号中的细微特征；多尺度图卷积模块通过多阶卷积核并行操作，不仅实现了邻域特征的提取，而且能够捕捉不同尺度下的结构信息；自注意力机制进一步建立长距离依赖关系，挖掘具有强泛化性的域不变特征。其次，在域对齐层面，设计加权联合差异对齐函数，融合高斯核矩阵与类别权重矩阵，分别计算类别依赖对齐损失与均值差异损失，实现局部类别分布与全局概率分布的双重校准，从而逐步缓解域偏移问题。【结果】在凯斯西储大学（CWRU）与江南大学轴承数据集上的验证结果表明，该方法在跨工况域自适应诊断中取得了显著优势，较传统方法表现出更高的诊断精度与鲁棒性。【结论】所提方法有效提升了跨域轴承故障诊断的性能，验证了多尺度图卷积与精细化对齐策略结合的可行性与有效性，并为进一步研究复杂工况下的智能诊断提供了参考。
+SN 1672-058X
+CN 50-1155/N
+LA 中文
+DS CNKI
+LK https://link.cnki.net/urlid/50.1155.N.20251112.0929.002
+
+RT Journal Article
+SR 1
+A1 Shouqiang Kang;Yulin Sun;Xinrui Li;Yujing Wang;Qingyan Wang;Xintao Liang
+AD Heilongjiang Province Key Laboratory of Pattern Recognition and Information Perception, Harbin University of Science and Technology, Harbin, 150080, China;Harbin University of Science and Technology,No. 52,Xuefu Road,Nangang District,Harbin,Heilongjiang Province,China
+T1 Unsupervised fault diagnosis method for rolling bearings based on federated universal domain adaptation
+JF Engineering Applications of Artificial Intelligence
+YR 2025
+IS PC
+vo 162
+OP 112518-112518
+K1 Rolling bearings;Fault diagnosis;Federated learning;Universal domain adaptation;Unsupervised learning
+AB To address the issues of low diagnostic model accuracy caused by non-sharing of rolling bearing private data, distribution differences, and label space discrepancies across multiple clients, as well as the challenges that certain clients face in obtaining labeled data, an unsupervised fault diagnosis method is proposed for rolling bearings based on federated universal domain adaptation (FUDA). First, privacy protection during the transmission process in federated learning is ensured by implementing random mapping at local clients. Second, the central server employs the proposed mixed radial basis kernel-maximum mean discrepancy (MR-MMD) method to further mitigate distributional disparities between the feature spaces of source and target clients. This achieves unsupervised features alignment between these features. Third, margin vectors are introduced to tackle label space disparities between source and target clients, enabling effective separation of unknown class samples in the dataset of the target client. ...
+SN 0952-1976
+DS CNKI
+LK https://link.cnki.net/doi/10.1016/J.ENGAPPAI.2025.112518
+DO 10.1016/J.ENGAPPAI.2025.112518
+
+RT Journal Article
+SR 1
+A1 Zhenli Xu;Guiji Tang;Bin Pang
+AD Department of Mechanical Engineering, North China Electric Power University, Baoding, China; Hebei Key Laboratory of Electric Machinery Health Maintenance & Failure Prevention, North China Electric Power University, Baoding, China; National & Local Joint Engineering Research Center of Metrology Instrument and System, Hebei University, Baoding, China; College of Quality and Technical Supervision, Hebei University, Baoding, China
+T1 Simulation-driven unsupervised fault diagnosis of rolling bearing under time-varying speeds
+JF Structural Health Monitoring
+YR 2025
+IS 6
+vo 24
+OP 3275-3291
+K1 Simulation-driven;multiscale enhanced temporal convolution transformer network;rolling bearing;time-varying speeds;unsupervised fault diagnosis
+AB Simulation models incorporating fault mechanisms can acquire sufficient samples with rich fault information, providing an effective solution to deep learning-driven bearing fault diagnosis in case of sample scarcity. However, the simulation models in the previous studies are mainly designed for constant speed conditions and cannot generate effective source data aligning with the variable speed conditions. Moreover, the fault impacts of bearing exhibit time-varying characteristics under variable speed conditions, causing the obstacle of the fault feature representation of the deep learning model. Therefore, this article investigates an analytical fault simulation model-driven unsupervised fault diagnosis of rolling bearing under time-varying speeds. The simulation model can customize high-quality data that match the specific variable speed conditions. The proposed network can extract robust discriminable feature representation by designing multiscale enhanced temporal convolution transformer network and enable...
+SN 1475-9217
+DS CNKI
+LK https://link.cnki.net/doi/10.1177/14759217241268813
+DO 10.1177/14759217241268813
+
+RT Journal Article
+SR 1
+A1 李璐
+AD 河北港口集团秦皇岛港股份有限公司铁路运输分公司;
+T1 基于深度学习技术的内燃机车发动机轴承故障诊断方法
+JF 今日制造与升级
+YR 2025
+IS 09
+vo 
+OP 154-157
+K1 深度学习;内燃机车;轴承故障检测
+AB 针对铁路内燃机车维修场景中轴承故障诊断存在的噪声干扰强、工况适应性差、检测效率低等问题，文章提出一种融合自适应信号处理与深度学习的智能诊断方法。通过优化振动信号采集方案与抗干扰特征提取策略，构建轻量化神经网络模型，实现复杂工况下轴承故障的精准辨识。实验表明，该方法在混合噪声抑制与多转速域泛化能力方面具有显著优势，为提升铁路机务段检修效率提供了可靠的技术支撑。
+SN 2095-6932
+CN 10-1196/TH
+LA 中文;
+DS CNKI
+LK https://kns.cnki.net/kcms2/article/abstract?v=dSUnQCB_TmOq8ffQmiNhB8vfzaDWV1TV3Fxv7CaKeGRGJ7qsL-3vcTRhvHCN615lbA3nXUOwicrcgsdKJGw3NXgwkrFENEoM4cNaMq3sHBK8G045pFnghbe3_Y31rEruwJeTpJoEq1IcwVUbCRZaVf-4s3cyp0W8nQy8dJKCkteuqLudGQA1qxZ2bxyHpulZ&uniplatform=NZKPT&language=CHS
+
+RT Journal Article
+SR 1
+A1 Zhihui Men;Dao Gong;Kai Zhou;Yuejian Chen;Jinsong Zhou
+AD Shanghai Key Laboratory of Rail Infrastructure Durability and System Safety, Tongji University, Shanghai, China;Department of Mechanical Engineering, University of Manitoba, Winnipeg, Manitoba, Canada;Shanghai Key Laboratory of Rail Infrastructure Durability and System Safety,Tongji University,Shanghai,China
+T1 Unsupervised domain adaptation method for bearing fault diagnosis assisted by twin data under extreme sample scarcity
+JF Mechanical Systems and Signal Processing
+YR 2025
+vo 239
+OP 113359-113359
+K1 Fault Diagnosis;Style Transfer;Extreme Sample Scarcity;Transfer Learning;Dynamic Analysis
+AB In small-sample bearing fault diagnosis, synthetic signals generated by simulation or generative models are commonly used to augment datasets. However, such signals often lack realistic noise and nonlinear characteristics, resulting in a domain gap between synthetic and real data. To address this, we propose an end-to-end method based on style transfer to generate twin data that better resembles real-world signals. First, a finite element model is built to derive the relationship between contact stiffness and radial force, and dynamic simulations are conducted using RecurDyn to obtain initial signals. Then, an Adaptive Style Transfer Network (AdasTNet) is employed to transfer the “style” of real signals to the simulated ones, enhancing their similarity in both time and frequency domains. The resulting twin data serves as the source domain, while the real data—without any labels—is treated as the target domain. We perform unsupervised domain adaptation using a CNN backbone combined with domain adversarial trai...
+SN 0888-3270
+DS CNKI
+LK https://link.cnki.net/doi/10.1016/J.YMSSP.2025.113359
+DO 10.1016/J.YMSSP.2025.113359
+
+RT Journal Article
+SR 1
+A1 Lin Song;Yanlin Zhao;Junjie He;Simin Wang;Boyang Zhong;Fei Wang
+AD School of Automobile and Transportation, Chengdu Technological University, Yibin 644012, China;School of Electrical Engineering, Southwest Jiaotong University, Chengdu 610031, China;School of Economics and Management, Panzhihua University, Panzhihua 617000, China
+T1 MAJATNet: A Lightweight Multi-Scale Attention Joint Adaptive Adversarial Transfer Network for Bearing Unsupervised Cross-Domain Fault Diagnosis
+JF Entropy
+YR 2025
+IS 10
+vo 27
+OP 1011-1011
+K1 bearings;multi-scale;attention mechanism;joint loss;transfer learning;fault diagnosis
+AB Rolling bearings are essential for modern mechanical equipment and serve in various operational environments. This paper addresses the challenge of vibration data discrepancies in bearings across different operating conditions, which often results in inaccurate fault diagnosis. To tackle this related limitation, a novel lightweight multi-scale attention-based joint adaptive adversarial transfer network, termed MAJATNet, is developed. The proposed network integrates a feature extraction network innovation module with an improved loss function, namely IJA loss. The feature extraction module employs a one-dimensional multi-scale attention residual structure to derive characteristics from monitoring data of source and target domains. IJA loss evaluates the joint distribution discrepancy of high-dimensional features and labels between these domains. IJA loss integrates a joint maximum mean discrepancy (JMMD) loss with a domain adversarial learning loss, which directs the model’s focus toward categorical features w...
+DS CNKI
+LK https://link.cnki.net/doi/10.3390/E27101011
+DO 10.3390/E27101011
+
+RT Journal Article
+SR 1
+A1 Shijing Cao;Yuxin Duan;Jin Huang
+AD Detroit Green Technology Institute, Hubei University of Technology, Wuhan, China; College of Mechanical Engineering, Hubei University of Technology, Wuhan, China
+T1 An interpretable unsupervised fault diagnosis method for rolling bearings based on physically-informed pseudo-label updating
+JF Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science
+YR 2025
+IS 19
+vo 239
+OP 8055-8072
+K1 PINN;unsupervised learning;pseudo labeling dynamic update;fault diagnosis
+AB During the operation of industrial equipment, substantial volumes of both normal and faulty unlabeled data are frequently generated. Traditional data-driven models are often susceptible to significant performance degradation in the presence of large amounts of unlabeled data, and their diagnostic decision-making processes typically lack robust physical interpretability. To address these challenges, this paper proposes an unsupervised Physical Information Neural Network (PINN) that utilizes the dynamic updating of pseudo-labels for the intelligent diagnosis of industrial bearings. The PINN is designed to compute the gradient of each network layer parameter through backpropagation, effectively combining data-driven learning with physical constraints and incorporating a regularization mechanism to enhance generalization capabilities. In the experiments, wavelet time-frequency diagrams are constructed based on three distinct fault states alongside the normal state of rolling bearings, elucidating the time-frequen...
+SN 0954-4062
+DS CNKI
+LK https://link.cnki.net/doi/10.1177/09544062251345305
+DO 10.1177/09544062251345305
+
+RT Journal Article
+SR 1
+A1 Lei Liu;Weihua Zhang;Fengshou Gu;Dongli Song;Guiting Tang;Yao Cheng
+AD State Key Laboratory of Rail Transit Vehicle System, Southwest Jiaotong University, Chengdu, China;Centre for Efficiency and Performance Engineering, University of Huddersfield, Huddersfield, UK
+T1 An unsupervised transfer network with adaptive input and dynamic channel pruning for train axle bearing fault diagnosis
+JF Structural Health Monitoring
+YR 2025
+IS 5
+vo 24
+OP 2837-2856
+K1 Adaptive input length;bearing fault diagnosis;channel pruning;noise reduction;unsupervised transfer learning
+AB The field of bearing fault diagnosis has witnessed remarkable advancements with cross-domain fault diagnosis techniques. Nonetheless, these existing methods suffer from two main drawbacks. First, the input length of these methods is fixed, such as 2048 sample points, irrespective of the diverse sampling frequencies, bearing structure parameters, and rotational speeds observed among transfer objects. Additionally, the transfer learning methods currently employed are not robust to noise, rendering them incapable of functioning optimally in contaminated target domains. To address the aforementioned challenges, this study presents an unsupervised transfer network for train axle bearing fault diagnosis. First, an adaptive input module is proposed, which enables the input length of the proposed network to be adaptively selected based on parameters such as sampling frequency and bearing structure. Then, an enhanced feature learning block with sharing parameters is designed to enhance the transfer learning feature ex...
+SN 1475-9217
+DS CNKI
+LK https://link.cnki.net/doi/10.1177/14759217241261926
+DO 10.1177/14759217241261926
+
+RT Journal Article
+SR 1
+A1 Pengping Luo;Zhiwei Liu
+AD School of Construction Machinery, Chang’an University, Xi’an 710064, China;Hunan Provincial Key Laboratory of Vehicle Power and Transmission System, Hunan Institute of Engineering, Xiangtan 411101, China
+T1 Unsupervised Bearing Fault Diagnosis Using Masked Self-Supervised Learning and Swin Transformer
+JF Machines
+YR 2025
+IS 9
+vo 13
+OP 792-792
+K1 unsupervised learning;bearing fault diagnosis;masked self-supervised learning;Swin Transformer;vibration signal analysis
+AB Bearings are vital to rotating machinery, where undetected faults can cause severe failures. Conventional fault diagnosis methods depend on manual feature engineering and labeled data, struggling with complex industrial conditions. This study introduces an innovative unsupervised framework combining masked self-supervised learning with the Swin Transformer for bearing fault diagnosis. The novel integration leverages masked Auto Encoders to learn robust features from unlabeled vibration signals through reconstruction-based pretraining, while the Swin Transformer’s shifted window attention mechanism enhances efficient capture of fault-related patterns in long-sequence signals. This approach eliminates reliance on labeled data, enabling precise detection of unknown faults. The proposed method achieves 99.53% accuracy on the Paderborn dataset and 100% accuracy on the CWRU dataset significantly, surpassing other unsupervised Auto Encoder-based methods. This method’s innovative design offers high adaptability and s...
+DS CNKI
+LK https://link.cnki.net/doi/10.3390/MACHINES13090792
+DO 10.3390/MACHINES13090792
+
+RT Dissertation/Thesis
+SR 1
+A1 王磊
+A3 唐鸿儒;莫兆祥
+PB 扬州大学
+T1 基于注意力机制与增量学习的水泵机组轴承故障诊断方法研究
+CL 硕士
+YR 2025
+IS 11
+K1 水泵机组;滑动轴承;故障诊断;注意力机制;增量学习
+AB 滑动轴承是水泵机组的重要组成部分,其运行过程中的振动状态直接关系机组的安全与稳定性。然而,泵站现场采集的轴承振动信号常受复杂工况与强背景噪声干扰,呈现出显著的非平稳特性与信噪比波动。传统一维信号特征提取方法如时域和频域特征提取依赖人工设计的单一域特征,难以全面有效地捕捉瞬态冲击与稳态调制特征,制约了故障诊断精度的提升;同时随着水泵机组生命周期中机组状态变化,新的故障形式可能出现,传统静态故障模型无法处理未知故障,可能导致故障漏报、误报现象。针对上述问题,本文首先进行了多种典型水泵机组滑动轴承故障模拟实验并采集不同工况与不同运行状态下的轴承振动数据,在此基础上开展基于注意力机制和增量学习的水泵机组滑动轴承故障诊断方法研究。研究内容包括多分支特征融合方法、基于注意力机制的故障诊断模型构建和基于知识蒸馏与回放训练的增量学习方法研究。目标是构建特征提取能力、故障诊断能力更强同时能够识别未知故障的故障诊断模型。
+传统故障诊断方法如支持向量机编SVM)通常依赖人工设计的时域或频域单一特征,难以全面有效的捕捉设备运行中的瞬态冲击与稳态调制信息,导致振动信号中的关键特征未能充分发掘。针对这一问题,本文构建一种多分支特征融合模型,利用连续小波变换编CWT)生成时频图像,并通过卷积神经网络编CNN)提取图像中深层特征,同时结合传统时域和频域统计特征,构建多分支网络结构进行特征融合,从而增强特征对状态信息的表达完整性与区分能力。
+针对基于浅层机器学习的故障诊断模型在强噪声背景下抗干扰能力不足,对不同运行状态下特征差异性较小的故障类别区分能力较弱的问题,设计了基于一维卷积神经网络编1D-CNN)的故障诊断模型。该模型通过卷积核共享机制捕捉特征的局部模式,更好适应融合特征的非线性与时序依赖性特征,有效降低计算复杂度并提高模型的诊断精度。此外,在卷积网络中引入卷积注意力模块编CBAM),增强对关键特征关注能力。实验结果表明,基于1D-CNN的故障诊断模型平均故障识别精度达到96.23%,加入CBAM模块后,模型平均故障识别精度提升至98.04%,其中原识别率最低的类别由86.27%提升至95.26%,改进效果显著。
+针对实际应用中故障诊断模型难以适应新增未知故障的问题,提出一种基于知识蒸馏与回放训练的增量学习方法。首先通过单类支持向量机编OCSVM)检测潜在异常样本,再利用基于密度的聚类算法编DBSCAN)对异常样本聚类分析并生成伪标签,借助伪标签引导模型对新类别进行学习。依靠知识蒸馏和回放训练机制迁移原模型知识并调整模型。实验结果表明,不采用知识蒸馏与回放训练的增量学习方法对于已知样本的遗忘率达到15.32%,开放类别测试中诊断精度仅为36.36%;联合知识蒸馏与回放训练策略后,模型对已知样本的遗忘率下降至2.82%,总体识别精度上升至92.52%。结果表明,基于知识蒸馏与回放训练的增量学习方法能在识别新故障的同时抑制灾难性遗忘。
+本文提出的方法可以提升水泵机组滑动轴承故障诊断模型在复杂工况下的泛化能力和应用实用性,为水泵机组滑动轴承的智能化在线监测与故障诊断提供了有效的方法与理论基础。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27441/d.cnki.gyzdu.2025.001058
+DO 10.27441/d.cnki.gyzdu.2025.001058
+
+RT Journal Article
+SR 1
+A1 崔朝阳;杨绍普;顾晓辉;申永军
+AD 石家庄铁道大学省部共建交通工程结构力学行为与系统安全国家重点实验室;石家庄铁道大学河北省交通工程结构力学行为演变与控制重点实验室;
+T1 基于多层联合分布自适应的高速列车轴箱轴承故障诊断方法
+JF 铁道学报
+YR 2025
+IS 08
+vo 47
+OP 65-72
+K1 故障诊断;深度学习;迁移学习;联合分布自适应
+AB 数据驱动下的故障诊断模型需要大量有标记的数据训练，并要求测试数据和训练数据满足独立同分布假设。针对上述问题，提出一种基于多层联合分布自适应的无监督模型用于高速列车轴箱轴承在不同运行工况下的智能诊断。该模型采用一维卷积神经网络进行故障特征的深度提取，基于多层联合最大均值差异进行跨域自适应，同时减小源域和目标域数据在高维希尔伯特特征空间上的边缘分布和条件分布差异。试验结果表明，该模型可有效用于跨工况下的轴箱轴承迁移诊断，相较CORAL、DDC、DAN等迁移方法，具有明显的优势。
+SN 1001-8360
+CN 11-2104/U
+LA 中文;
+DS CNKI
+LK https://kns.cnki.net/kcms2/article/abstract?v=dSUnQCB_TmMaSUKRmc4xHCLqoyNfDhEeDapEyhvq7dfQDrXiMKjky7KAyjZF9uwQv6OxMmCBm6gRw7IOkiHVs4J1H1NgBTLGMCQm4bScebjOoAxbP8dtbv-64xFpAEFQ227Kac3JqcJZ-_5VIJX8abV5pnaX4Ryx_vO9RI2DOnPO7VzbfZyUQt1N6VwhAeNi&uniplatform=NZKPT&language=CHS
+
+RT Journal Article
+SR 1
+A1 麻全;艾绍腾;张泽阳;刘东;徐卓飞
+AD 中国电建集团西北勘测设计研究院有限公司;西安理工大学印刷包装与数字媒体学院;
+T1 基于连续小波分析与注意力机制的滚动轴承故障诊断
+JF 印刷与数字媒体技术研究
+YR 2025
+IS 04
+vo 
+OP 157-168
+K1 连续小波变换;注意力机制;卷积神经网络;故障诊断
+AB 针对当前深度学习模型在滚动轴承故障诊断研究中存在的可解释性差、过程不清晰等问题，本研究提出一种基于连续小波分析与注意力机制的滚动轴承故障诊断模型。首先，采用连续小波分析获取故障信号多尺度时频解析规律，并将其转化为数字图像形式；进而，构建了基于压缩激励注意力的卷积神经网络模型，实现了时频图像的特征提取和滚动轴承故障诊断；同时，计算了滚动轴承故障信号时频图像的注意力机制权重图，获取不同故障类型滚动轴承时频图像上的故障表现规律，为频谱分析提供了可视化解释，实现深度学习模型对故障现象的解析；最后，在机械故障综合模拟试验平台开展了故障诊断实验，得到了5类故障轴承的频谱分布规律，所建立的基于压缩激励注意力的卷积神经网络模型故障识别准确率达98.81%。本研究实现了滚动轴承多种故障的诊断，获取了故障轴承频谱分布规律，结合注意力机制权重图与连续小波分析频谱图实现了故障特征抽取机理的分析，弥补了深度学习模型对故障现象解释性差、过程不清晰等缺陷。
+SN 2097-2474
+CN 10-1886/TS
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.19370/j.cnki.cn10-1886/ts.2025.04.017
+DO 10.19370/j.cnki.cn10-1886/ts.2025.04.017
+
+RT Journal Article
+SR 1
+A1 林亚团;王子逢;彭晶
+AD 河钢数字技术股份有限公司;
+T1 分类性差异对抗自适应的无监督轴承故障诊断
+JF 轧钢
+YR 2025
+IS 05
+vo 42
+OP 159-169
+K1 无监督学习;对抗自适应网络;分类性差异;故障诊断;轴承
+AB 针对工业轴承故障诊断中跨域数据分布差异显著、标注数据稀缺及传统域自适应方法忽视子域边界信息的问题，提出了一种基于分类性差异对抗自适应网络的无监督轴承故障诊断方法。该方法创新性地融合了子域边界精细化对齐机制，通过结合一维卷积神经网络与门控循环单元的混合架构协同建模局部时频特征与长程时序依赖性，显著提升了跨域特征一致性；设计了对抗自适应特征生成器-判别器网络，引入了动态博弈机制优化训练过程，并利用L2范数约束强制潜在空间几何一致性，有效抑制了噪声干扰并实现了域不变特征的高效生成；构建了多模态故障分类框架，采用注意力加权的非线性融合策略动态整合振动信号时频特性变化，提升了复杂故障模式的分类精度。在CWRU轴承数据集上的实验验证表明：模型在包含不同转速（1 797、1 772、1 750 r/min）和故障程度（0.177 8、0.355 6、0.533 4 mm）的C1～C6、C7～C12、C13～C18实验组中均表现优异，故障平均识别准确率分别达到91.52%、94.65%和91.40%,显著优于REB-ADDA、MsDCNs、SDA和ISAMCN等对比模型；在超参数配置学习率0.001、批量大小64时，C1～C6组故障平均识别准确率高达98.7%,较最优基线模型提升6.2%,最高精准率98.5%、召回率98.2%、F1-score98.3%等指标均表现突出；t-SNE可视化结果清晰显示不同故障类簇边界分明，内圈与滚动体故障特征分离显著，有效证明模型的特征判别能力与可解释性，为工业轴承智能运维提供了高精度、强鲁棒性的解决方案。
+SN 1003-9996
+CN 11-2466/TF
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.13228/j.boyuan.issn1003-9996.20250518
+DO 10.13228/j.boyuan.issn1003-9996.20250518
+
+RT Journal Article
+SR 1
+A1 Xiaoxu Li;Jiahao Wang;Jianqiang Wang;Jixuan Wang;Qinghua Li;Xuelian Yu;Jiaming Chen
+AD College of Mechanical and Vehicular Engineering, Changchun University, Changchun 130022, China
+T1 Research on Unsupervised Domain Adaptive Bearing Fault Diagnosis Method Based on Migration Learning Using MSACNN-IJMMD-DANN
+JF Machines
+YR 2025
+IS 7
+vo 13
+OP 618-618
+K1 fault diagnosis;transfer learning;multi-scale convolution;attention mechanism;JMMD;unsupervised domain adaptation
+AB To address the problems of feature extraction, cost of obtaining labeled samples, and large differences in domain distribution in bearing fault diagnosis on variable operating conditions, an unsupervised domain-adaptive bearing fault diagnosis method based on migration learning using MSACNN-IJMMD-DANN (multi-scale and attention-based convolutional neural network, MSACNN, improved joint maximum mean discrepancy, IJMMD, domain adversarial neural network, DANN) is proposed. Firstly, in order to extract fault-type features from the source domain and target domain, this paper establishes a MSACNN based on multi-scale and attention mechanisms. Secondly, to reduce the feature distribution difference between the source and target domains and address the issue of domain distribution differences, the joint maximum mean discrepancy and correlation alignment approaches are used to create the metric criterion. Then, the adversarial loss mechanism in DANN is introduced to reduce the interference of weakly correlated domain...
+DS CNKI
+LK https://link.cnki.net/doi/10.3390/MACHINES13070618
+DO 10.3390/MACHINES13070618
+
+RT Journal Article
+SR 1
+A1 李庆;周公博;周坪;闫晓东;韩链锋;李强;马国庆
+AD 江苏省矿山机电设备重点实验室;中国矿业大学机电工程学院;陕西延长石油榆林可可盖煤业有限公司;
+T1 基于多维信息协同神经网络的轴承跨工况故障诊断
+JF 振动与冲击
+YR 2025
+IS 13
+vo 44
+OP 296-308
+K1 域泛化;故障诊断;归一化;注意力机制;卷积神经网络
+AB 目前大多数域泛化学习方法的实现依赖多源域和有标签数据，然而，在轴承的复杂运行工况下，对机械进行完整的监测数据采集非常困难。针对不完备信息下的跨工况故障诊断任务，提出了一种基于多维信息协同神经网络(multi-dimensional information collaborative neural network, MICNN)的轴承跨工况故障诊断方法。MICNN包括协同归一化(collaborative normalization, CNM)策略和多维时空特征融合模块(multi-dimensional spatiotemporal feature fusion module, MSTFF)。CNM通过集群和样本个体两种维度上的特征统一和信息融合来减少协变量偏移和过拟合现象；MSTFF通过通道和空间维度上的关键特征捕捉和信息交互来增强域不变特征的提取。所提方法在PU数据集、江南大学数据集和实验室自建数据集的6个不同跨工况任务中平均准确率分别达到了98.74%、96.59%和93.81%,与现有主流的方法相比，所提方法具有更好的故障诊断效果。
+SN 1000-3835
+CN 31-1316/TU
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.13465/j.cnki.jvs.2025.13.032
+DO 10.13465/j.cnki.jvs.2025.13.032
+
+RT Journal Article
+SR 1
+A1 朱继扬;李邦;蔡海;丁晓明
+AD 南京中船绿洲机器有限公司;
+T1 基于1D TRLTN的未知工况滚动轴承故障诊断
+JF 机电设备
+YR 2025
+IS 04
+vo 42
+OP 66-73
+K1 碟式分离机;滚动轴承;故障诊断;领域泛化;未知工况
+AB 碟式分离机在实际运作中会根据不同的分离要求和物料特性调整转速，导致每种工况下滚动轴承数据获取困难且耗时，且无法提前获得未知工况下的样本。为实现未知工况滚动轴承的故障诊断，提出一维三叉戟表示学习迁移网络（1D TRLTN）法，利用领域泛化中的表示学习方法从原有工况数据中学习泛化能力强的故障诊断模型并作用到任意工况中。1D TRLTN利用3个不同的卷积子结构层全面提取滚动轴承1维原始振动信号的特征信息；利用知识蒸馏框架获得傅里叶相位信息作为域内不变特征，采用动态分布适应（DDA）方法获取域间不变特征，利用L2函数最大正则化二者间的特征以获得更多不变特征，获得泛化能力强的模型；在碟式分离机上的轴承数据集上进行验证。结果表明，相比主流的迁移学习方法，采用所提方法进行故障识别的准确率最高。该方法解决了碟式分离机在复杂运行环境下的滚动轴承故障诊断难题，可为碟式分离机安全运行提供技术保障。
+SN 1005-8354
+CN 31-1420/TM
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.16443/j.cnki.31-1420.2025.04.014
+DO 10.16443/j.cnki.31-1420.2025.04.014
+
+RT Journal Article
+SR 1
+A1 秦毅;杨瑞;赵丽娟;毛永芳
+AD 重庆大学机械与运载工程学院;重庆中车时代电气技术有限公司;重庆大学自动化学院;
+T1 面向轴承故障诊断的无监督噪声自适应匹配追踪算法展开去噪网络
+JF 机械工程学报
+YR 2025
+IS 12
+vo 61
+OP 26-38
+K1 稀疏表示;算法展开;信号去噪;可解释网络;故障诊断
+AB 滚动轴承是重要的支撑部件，容易发生故障，迫切需要对其进行故障诊断。但是采集的轴承振动信号中存在噪声，制约了诊断精度的提升。针对基于信号处理、深度学习及稀疏算法展开的去噪方法存在的自适应性差、可解释性低、有监督训练等问题，设计DCT-Laplace字典以表示信号的谐波和冲击成分；提出去冲击区域的小波变换噪声估计方法以确定噪声的标准差；然后通过比较噪声和重构残差的功率自适应地确定稀疏算法展开网络的展开数，进而构建一种无监督噪声自适应的匹配追踪算法展开去噪网络；最后将去噪结果输入到多层迭代软阈值算法网络实现轴承的故障诊断。将所提方法应用于两个滚动轴承故障诊断试验，并与其他典型去噪方法进行对比。试验结果验证了所提方法能有效地去除信号中的噪声及保留故障特征，因而提高了噪声下故障诊断的精度。
+SN 0577-6686
+CN 11-2187/TH
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/urlid/11.2187.TH.20250702.1508.002
+
+RT Dissertation/Thesis
+SR 1
+A1 向佳伟
+A3 房海瑞
+PB 东北电力大学
+T1 面向滚动轴承的域泛化故障诊断方法研究与系统开发
+CL 硕士
+YR 2025
+DS CNKI
+LK https://kns.cnki.net/kcms2/article/abstract?v=dSUnQCB_TmOrEfX3n-fkY8CzWGNJ5PNmLeUjlWlPRsK5u3bLrrcy7_3H1juspwhKsLnb5o6MO5otkybXeHgW8dt7CcC_74B7Y61Z4wlTTQ7-ARMb9IJieHY51HKM9mk2iLqRWX_MpC_YA4ZvOuN9yj7H5oBpYCDAF8fLYH4MtRBKaWrpU4sZI1K8qxLS230Q&uniplatform=NZKPT&language=CHS
+
+RT Journal Article
+SR 1
+A1 王萌璠;蔡宗琰;田心平;周昌
+AD 长安大学工程机械学院;
+T1 基于LMMD-DANN的无监督风电轴承故障诊断方法
+JF 机电工程技术
+OP 1-12
+K1 轴承故障诊断;迁移学习;变工况;域对抗
+AB 风电机组滚动轴承的健康状态直接影响着设备性能，但变工况条件下，目标域数据常常缺少标签，其诊断性能会大大降低。为此提出了LMMD-DANN故障诊断模型。该模型采用多模块集成架构，结合了特征提取网络、局部最大均值差异（LMMD）算法和域对抗神经网络（DANN）。即通过引入域对抗机制，在特征提取器和域分类器之间建立对抗关系，增强了特征提取能力，实现了跨域数据的特征混淆。同时，使用LMMD算法关注局部特征，促进了同类子域的特征对齐。引入了自适应权重策略，动态调整域分类损失在损失函数中的比重。在CWRU和JNU轴承数据集上的实验结果显示，所提方法在6个变工况任务中的平均准确率分别达到98.88%和89.1%，故LMMD-DANN在变工况无监督故障诊断场景中更具优势。
+SN 1009-9492
+CN 44-1522/TH
+LA 中文
+DS CNKI
+LK https://link.cnki.net/urlid/44.1522.th.20250610.1913.004
+
+RT Dissertation/Thesis
+SR 1
+A1 王子卓
+A3 宋存利
+PB 大连交通大学
+T1 基于增强卷积神经网络的小样本滚动轴承故障诊断方法研究
+CL 硕士
+YR 2025
+IS 08
+K1 滚动轴承故障诊断;优化算法;卷积神经网络;注意力机制;小样本
+AB 智能制造背景下,滚动轴承精准故障诊断是保障工业设备可靠运行的关键。针对深度学习模型面临的特征提取,小样本、变工况、复合故障检测等挑战,本研究提出基于增强卷积神经网络的智能诊断方法,通过信号处理、网络架构与训练策略协同优化,显著提升诊断性能。本文工作内容如下:
+(1)针对滚动轴承故障诊断中非平稳振动信号瞬态特征提取难题,本研究提出一种基于时频图像化表征与改进卷积神经网络的协同诊断方法。通过短时傅里叶变换(STFT)将一维振动信号转换为二维时频图像,突破传统时频域解耦分析对瞬态冲击特征的捕捉瓶颈;以Conv Ne Xt为基线架构,引入动态瓶颈压缩、非对称卷积分解重构及多级跨层残差连接策略,实现轻量化设计与特征表达能力的协同优化。针对MConv Ne Xt模型诊断的准确率受网络结构参数影响的问题,提出添加改进金豺优化算法(IGJO)对其模型结构参数进行寻优,IGJO的初始化策略与收敛机制,通过余弦调控因子和t分布变异策略增强全局搜索能力,完成网络超参数自适应优化。该方法通过基于CWRU数据集的消融分析验证了时频表征、网络架构及优化算法的协同效应,与主流模型的对比实验结果验证了该方法针对于滚动轴承故障诊断任务的有效性。在基于SEU数据集的跨工况泛化性实验中展现出良好的泛化能力,为复杂工业场景下的轴承故障诊断提供了新的技术路径。
+(2)针对小样本轴承故障诊断中特征提取效率低与跨工况泛化弱问题,本研究提出一种基于注意力机制的增强型Conv Ne Xt V2小样本故障诊断方法。首先,采用具有多分辨率优势的连续小波变换CWT生成时频特征更加明显的二维图像;其次,应用数据增强策略扩充训练样本以解决小样本问题,降低过拟合概率,提升泛化能力;选用性能更优的Conv Ne Xt V2为骨干网络,并集成两大模块进行增强:(1)通过混合深度卷积Mix Conv并行使用不同尺寸卷积核捕捉多尺度特征,提高特征提取的有效性;(2)利用CBAM卷积注意力模块聚焦于最具判别力的关键信息。通过消融实验定量相关模块的独立贡献,并在CWRU、SEU及Ottawa多源数据集上进行对比与泛化实验验证模型性能。结果表明,该方法在小样本场景下具有良好的诊断效果,在变转速、复合故障等跨工况任务中展现出良好的泛化能力。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.26990/d.cnki.gsltc.2025.000376
+DO 10.26990/d.cnki.gsltc.2025.000376
+
+RT Journal Article
+SR 1
+A1 Bin Liu;Changfeng Yan;Chao He;Ming Lv;Jianxiong Wei;Lixiao Wu
+AD School of Mechanical and Electronical Engineering, Lanzhou University of Technology, Lanzhou 730050, China;State Key Laboratory of Advanced Rail Autonomous Operation, Beijing Jiaotong University, Beijing 100044, China;School of Mechanical and Electronical Engineering,Lanzhou University of Technology,Lanzhou,730050,China
+T1 An interpretable physics-informed subdomain moment-enhanced adaptation network for unsupervised transfer fault diagnosis of rolling bearing
+JF Advanced Engineering Informatics
+YR 2025
+vo 67
+OP 103491-103491
+K1 Physics-informed;Interpretability;Subdomain moment-enhanced;Dynamic convolution;Local multi-order moment discrepancy;Transfer fault diagnosis
+AB Efficient and accurate diagnosis of rolling bearing fault is essential to prevent equipment damage. However, Intelligent Fault Diagnosis (IFD) methods are mostly data-dependent and lack interpretability, especially in the face of complex working conditions and multi-fault coupling environment, it is difficult to deal with the feature discrepancy between different distribution domains. To solve these issues, an interpretable Physics-Informed Subdomain Moment-Enhanced Adaptation Network (PISMEAN) is proposed, which aims to alleviate subdomain shift and enhance the interpretability of diagnosis process through physical convolution kernel mapping and high-order moment discrepancy metric. Firstly, the wavelet basis function is utilized for time–frequency analysis of local signal, and multiple of adaptive bandpass filtering structures are designed based on the frequency response set, thus the Physics-Informed Dynamic Convolution (PIDConv) layer is constructed, which effectively improves the correlation between the ...
+SN 1474-0346
+DS CNKI
+LK https://link.cnki.net/doi/10.1016/J.AEI.2025.103491
+DO 10.1016/J.AEI.2025.103491
+
+RT Dissertation/Thesis
+SR 1
+A1 汪振鹏
+A3 朱晓娟
+PB 安徽理工大学
+T1 基于半监督与无监督迁移学习的滚动轴承故障诊断研究
+CL 硕士
+YR 2025
+IS 10
+K1 滚动轴承故障诊断;深度迁移学习;半监督;无监督;领域自适应
+AB 滚动轴承作为现代机械装备的核心部件,其运行状态直接影响整个机械系统的稳定性和可靠性。为了确保设备的安全运行,研究和实施滚动轴承的故障诊断至关重要。随着设备运行环境日趋复杂,尤其是故障类型的多样性和数据的不可预测性,使得传统的故障诊断方法面临难以适应不断变化工况的困境。近年来,深度学习技术在故障诊断领域取得了优异的表现,但其高准确性通常依赖于大量的标注数据、并假设训练数据和测试数据具有相似的特征分布。因此,许多基于数据驱动的故障诊断模型在面对工况复杂多变、故障样本稀缺等问题时,难以达到预期性能,导致模型在实际应用中的诊断性能和泛化能力显著下降。针对上述问题,本文以深度学习和迁移学习为理论基础,结合半监督与无监督学习策略,展开相关研究,主要内容如下:
+(1)针对源域标记样本不足阻碍故障诊断模型的建立,故障特征信息利用不充分的问题,提出一种基于决策边界自适应的半监督滚动轴承故障诊断方法。首先结合伪标签、一致性正则化和数据增强技术训练初始深度学习模型,建立初始决策边界;然后,引入监督对比学习,提升模型的特征提取能力,优化决策边界;最后,在迁移过程中,通过对齐两域数据的预测矩阵,减少数据特征分布差异,并结合核范数,增强决策边界对目标域数据的适应能力,完善决策边界。在两个数据集上进行实验,结果表明所提方法的诊断准确性优于其他对比方法,具有良好的鲁棒性。
+(2)针对工况变化导致源域与目标域数据分布存在显著差异,且目标域标签数据难以获取的跨域故障诊断问题,提出一种基于交叉注意力的无监督域适应滚动轴承故障诊断方法。首先使用交叉注意力模块对齐跨域间局部相似样本,并提取两域的故障特征;然后,使用基于Wasserstein距离的域适应策略,进一步缩小源域与目标域之间的边缘特征分布差异;最后,对无标签的目标域数据,提出伪标签生成方案,提升目标域数据的可利用性。在不同的轴承数据集进行实验,结果表明,所提方法具有较高的诊断性能,在变工况场景下更具优势。
+图[28]表[10]参[90]
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.26918/d.cnki.ghngc.2025.000743
+DO 10.26918/d.cnki.ghngc.2025.000743
+
+RT Dissertation/Thesis
+SR 1
+A1 贡莹莹
+A3 朱晓娟
+PB 安徽理工大学
+T1 基于深度迁移学习的轴承故障诊断研究
+CL 硕士
+YR 2025
+IS 10
+K1 故障诊断;迁移学习;领域自适应;变工况;轴承
+AB 轴承作为旋转机械的核心组件,由于长期在复杂工况下运行,容易出现故障,因此需要高效精准的诊断技术来确保设备的稳定运行和可靠性。近年来,随着人工智能的发展,基于深度学习的数据驱动故障诊断方法备受关注,但此类方法通常依赖独立同分布假设并需要大量标记样本,难以应对工业场景下工况多变、故障数据分布差异较大等挑战,导致模型的泛化性较差。另外,工业现场可能包含测试阶段未出现的故障类别,而现有开放集领域自适应方法在多类未知故障识别方面仍存在局限性。针对上述问题,本文以深度迁移学习为基础,结合闭集和开放集两种数据设定展开研究:
+(1)在闭集设定下,针对轴承在不同工况下振动信号特征分布差异较大、单一感受野难以有效涵盖多尺度故障特征的问题,本文提出一种多尺度子领域自适应的轴承故障诊断方法。首先,通过局部最大均值差异量化相同类别下故障的跨域分布差异,提取域不变特征;其次,设计多尺度膨胀卷积网络自适应匹配工况特征,避免信息遗漏;最后,结合SE注意力机制动态加权多尺度特征,强化关键故障信息提升子类特征表达一致性。实验结果表明,该方法有效克服传统方法在工况适应性和特征覆盖方面的不足,提升了模型的泛化性能。
+(2)在开放集设定下,针对目标域中存在的未知故障识别问题,提出了一种多源开放集领域自适应方法。该方法充分利用不同工况下的多源信息,提高对未知故障的识别效果:首先,通过类别遍历模块提取每个源域的特征,找出共有特征和独特特征;其次,采用相似度筛选机制和阈值来区分已知故障和未知故障,减少误判;最后,通过动态类别扩展机制,对筛选出的未知类进行唯一标识。这些未知类故障被标识后逐步纳入源域,并进行特征对齐。实验结果表明,该方法能成功识别多个未知类,显著提升了模型的泛化能力。
+图[36]表[11]参[88]
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.26918/d.cnki.ghngc.2025.000679
+DO 10.26918/d.cnki.ghngc.2025.000679
+
+RT Dissertation/Thesis
+SR 1
+A1 花兴
+A3 鄢小安;陈伟
+PB 南京林业大学
+T1 基于机理—数据融合的噪声条件下滚动轴承故障诊断方法研究
+CL 硕士
+YR 2025
+K1 滚动轴承;动力学模型;迁移学习;机理-数据融合;故障诊断
+AB 滚动轴承作为机械系统的核心组件,一旦出现故障将直接影响旋转系统甚至整台机械装备的运行精度、服役周期和可靠性。鉴于其在工业装备中的重要作用,实施轴承的状态监测与智能诊断研究具有重要的工程应用价值。一方面,滚动轴承动力学模型的构建是解析其振动特性的前提,通过纳入单一及复合故障模式,深入探究故障形成机制,这为后续诊断技术开发奠定了理论基础。当前,融合故障机理分析的智能诊断方法研究已成为该领域的重要发展方向,其研究成果对于提升设备预测性维护水平具有显著意义。另一方面,实际工程运行中采集到的振动信号常常包含着大量的噪声,但是如何有效去除噪声干扰,提取故障振动信号成为了一大难题。针对实际工程环境中机械装备运行工况的动态非平稳性及故障样本稀缺的工程问题,本文拟开展基于机理-数据融合的噪声条件下滚动轴承故障诊断研究,以解决强噪声干扰、小样本数据场景下轴承故障难以有效识别的问题。主要研究内容为以下四个方面:(1)基于集中参数法的滚动轴承动力学建模。本文首先构建了滚动轴承的六自由度动力学模型,生成了能够反映滚动轴承正常状态、内圈故障、外圈故障、滚动体故障和内外圈复合故障状态下振动特性的仿真信号。在健康轴承建模中,仅考虑了时变刚度和滚动体随机滑动对位移激励的影响。而在故障状态下,除了时变刚度和随机滑动外,还引入了局部缺陷对位移激励的影响,重点分析了轴承在故障区域的接触变形特性。由于滚动体进入故障区域后的接触变形不是一个突变的过程,本文分析对比了矩形位移激励和半正弦位移激励,进而选择了更为平滑的半正弦位移激励来表征滚动体经过故障区域的附加位移变化。最后,通过考虑随机滑动因素对滚动体在滚道内的无规律运动进行表征,进而建立了高精度的滚动轴承动力学仿真模型。(2)滚动轴承动力学模型分析验证。首先,对滚动轴承外圈故障、内圈故障、滚动体故障以及内外圈复合故障下的故障信号进行了研究,并对不同案例的仿真信号与试验实测信号的时域波形及包络谱进行了对比分析。其次,通过分析外圈不同故障尺寸下的振动特性和包络谱故障频率,发现了随着故障尺寸的逐步增大,轴承的冲击幅值也在逐步变大,但是其故障特征频率相同,这也证明了轴承的故障特征频率与故障尺寸没有关联。最后,通过分析复合故障仿真信号和局部单点故障仿真信号的异同点,揭示了复合故障信号和相应单点故障信号的耦合叠加关系。(3)针对强噪声环境下滚动轴承故障诊断精度较低的问题,本文提出了一种结合SPAVMD与WOA-LSSVM的鲁棒智能诊断方法,可有效识别滚动轴承的故障类型。首先,提出了一种用于信号分解的SPAVMD,其中IGINI被用作GSA的适应度函数,以优化VMD的关键参数。所提出的SPAVMD既可以提高对噪声信号的分解能力,又可以避免手动选择VMD参数的缺点。其次,提出了一种用于信号筛选重构的EWKGI,它既能保留有效模式分量,又能达到一定的降噪效果。然后,通过精细符合多尺度色散熵提取重构信号的多尺度特征向量集。最后,提出了一种名为WOA-LSSVM的新分类模型用于故障识别,其中引入了WOA来自动确定其模型参数,比其他类似的分类模型具有更好的学习性能和更高的识别精度。(4)针对传统学习模型在小样本噪声环境中故障诊断表现较差的问题,提出了一种融合机理与数据的滚动轴承故障诊断框架,以提升噪声条件下的分类效果。首先,基于第二章所构建的动力学模型生成多个故障类型下带标签的振动仿真信号,解决了实际工程中故障数据难以采集的问题;其次,将故障机理与迁移学习的故障诊断方法进行结合,使特征提取器能够提取源域与目标域的共有特征,从而实现小样本噪声条件下轴承故障诊断;最后,通过两个数据集对所提方法的实用性与优越性进行了验证。本文提出的MK-MMD+DANN网络模型通过域对抗训练以及MK-MMD特征对齐策略之间的对抗训练学习域不变特征,相比于传统的域对抗模型和特征对齐策略具有更好的泛化性能。基于机理模型-数据融合的滚动轴承迁移故障诊断方法不仅能够有效克服传统网络模型对数据标签的依耐性,而且能够解决小样本噪声条件下轴承故障诊断难的问题,有着良好的实际应用价值。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27242/d.cnki.gnjlu.2025.000212
+DO 10.27242/d.cnki.gnjlu.2025.000212
+
+RT Dissertation/Thesis
+SR 1
+A1 章伟忠
+A3 鄢小安;陈伟
+PB 南京林业大学
+T1 基于改进卷积神经网络的滚动轴承故障诊断方法研究
+CL 硕士
+YR 2025
+K1 滚动轴承;故障诊断;卷积神经网络;深度学习
+AB 随着信息技术的不断发展,滚动轴承作为旋转机械中的关键部件,对机械系统的稳定性和可靠性起着至关重要的作用。然而,在复杂工况和高负荷运行条件下,滚动轴承故障问题极易发生,不仅会降低设备性能,还可能引发安全隐患和巨大的经济损失。因此,如何精准地诊断轴承故障已成为故障诊断领域的研究热点。传统故障诊断方法依赖人工特征提取,并且效率和精度有限,而深度学习中的卷积神经网络(Convolutional neural network,CNN)以其强大的自动特征提取和模式学习能力,逐渐成为故障诊断领域的重要工具。然而,CNN在特征提取能力和鲁棒性方面仍存在不足。因此,本文针对强噪声环境、单源信息表征不足以及样本稀少的问题,提出一系列改进CNN故障诊断模型,具有一定的学术价值和工程意义。本文的主要贡献如下:(1)针对传统模型在强噪声环境下诊断精度不高的问题,提出了一种基于参数优化辛几何模式分解(Parameter-optimized symplectic geometry mode decomposition,POSGMD)和改进卷积神经网络(Improved convolutional neural network,ICNN)的滚动轴承故障诊断方法。通过相对熵自适应选择嵌入维数,设计了POSGMD,将轴承振动信号自动分解为不同的辛几何分量(Symplectic geometric component,SGC),避免了传统手动选择嵌入维数的不足。同时,利用峭度加权原理对分解得到的SGC进行信号重构,生成重构信号后,通过连续小波变换(CWT)生成时频图像作为样本数据集。最后,利用提出的ICNN进行模型训练和故障类型自动识别,在ICNN中加入增强的卷积块和残差块来提升模型特征提取能力并缓解梯度消失问题,并通过dorpout层来缓解网络的过拟合。实验验证表明,与传统故障诊断方法相比,该方法具有更高的诊断精度和更强的抗噪声能力,有效提高了模型的鲁棒性。(2)针对现有大多数诊断模型仅采用单一传感器信号而导致的故障特征表征不足问题,提出了一种基于多尺度双重注意力增强网络的多传感器数据融合滚动轴承故障诊断方法(MSDF-MSDAENet)。首先,提出了多传感器数据融合(MSDF)策略,将多个传感器的高维数据降维后提取有效特征,并融合为三维像素矩阵图像。随后,设计了多尺度双重注意力增强网络(MSDAENet),结合时频特征提取模块和位置信息提取模块,显著提升了模型提取故障特征的能力。实验结果表明,该方法可以更充分的提取轴承故障信息,并且在两个公开数据集上的诊断准确性和稳定性显著优于多种现有模型,能够有效识别多种故障类型。(3)针对现有大多数诊断模型在样本数量稀少的情况下诊断精度较低的问题,提出了一种基于改进卷积原型神经网络的小样本滚动轴承故障诊断方法。该方法采用元学习策略,并且设计了新型注意力机制——动态全局适应注意力(Dynamic global adaptation attention,DGAA),DGAA结合全局上下文信息和动态通道权重调整,增强了模型特征提取能力。采用DGAA优化的卷积模块作为原型网络的核心特征提取器,该方法能够更精准地捕捉关键故障特征,并有效抑制无关或冗余信息,进一步优化了原型网络中的类原型生成。通过实验分析结果表明:本文方法在变工况小样本场景中的诊断性能表现出显著优势,相比传统的小样本故障诊断方法具有更高的精度。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27242/d.cnki.gnjlu.2025.000983
+DO 10.27242/d.cnki.gnjlu.2025.000983
+
+RT Dissertation/Thesis
+SR 1
+A1 欧阳炳
+A3 张超
+PB 内蒙古科技大学
+T1 基于领域自适应的宽度学习滚动轴承故障诊断方法研究
+CL 硕士
+YR 2025
+IS 09
+K1 滚动轴承;故障诊断;领域自适应;宽度学习;贝叶斯优化
+AB 滚动轴承作为旋转机械的核心传动部件,其可靠性与仪表仪器、精密机床、交通装备及航空发动机等关键设备的运行安全密切相关。在复杂工况条件下,振动信号的非平稳特性易引发数据分布的时变偏移,传统故障诊断方法常受限于特征冗余度高、参数敏感性强及跨域泛化性弱等问题。而当前广泛应用的深度学习方法虽具备强大的特征表征能力,但在实际工业场景中可能面临计算资源消耗大、模型训练周期长以及易陷入梯度消失,局部最优陷阱等不足。为此,本文构建了一种融合领域自适应与宽度学习的故障诊断框架,引入宽度学习特有的增量学习机制和扁平化网络结构,通过“特征选择-参数优化-领域迁移”协同机制,确保模型轻量化的同时实现诊断性能的提升。主要研究内容如下:
+针对高维特征冗余问题,本文提出了一种基于最大相关最小冗余特征选择和宽度学习相结合的滚动轴承故障诊断方法。该算法首先通过在原始振动信号中提取特征,再使用最大相关最小冗余特征选择算法选择出与故障类型关系最为密切的特征,去除冗余、不相关或噪声特征,最后结合宽度学习进行分类预测实现故障诊断。实验表明,其在CWRU数据集上的测试准确率达92.06%,较原始信号输入提升32.25%。
+针对宽度学习超参数敏感性问题,本文设计了改进贝叶斯优化方法优化宽度学习超参数。通过自适应复合核函数与混合优化策略,实现了连续-离散参数的高效搜索,以原始信号经特征提取与选择后得到的最优特征子集作为输入,在自制数据集上对比默认参数的宽度学习模型的准确率从78.82%提升至89.56%,收敛速度较其他优化方法有不同程度的提高。
+针对跨域数据分布差异问题,本文提出了一种领域自适应的宽度学习合成样本算法。通过迁移采样与类内插值生成平衡样本集,结合增量学习实现跨域知识迁移。采用CWRU数据集与自制数据集进行验证,设立跨载荷与跨转速两个不同的场景迁移任务,并对比了四大深度神经网络范式与两类深度迁移学习架构,验证了该算法的有效性与优越性。结果表明,在跨载荷的12项迁移子任务中11项实现最好的诊断精度,较传统域自适应算法提升1.1%,且训练时间仅6.63秒,实现从分钟到秒级的提升;在跨转速任务中以89.25%平均准确率领先。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27724/d.cnki.gnmgk.2025.000325
+DO 10.27724/d.cnki.gnmgk.2025.000325
+
+RT Dissertation/Thesis
+SR 1
+A1 周圆
+A3 岳晓峰;张贵辉
+PB 长春工业大学
+T1 基于深度迁移学习的滚动轴承故障诊断方法研究
+CL 硕士
+YR 2025
+IS 09
+K1 深度学习;滚动轴承故障诊断;纹理损失;核范数正则化
+AB 滚动轴承是旋转机械的重要基础部件,其健康状态直接影响设备的性能与可靠性。相比于传统的轴承故障诊断方法,基于深度学习的故障诊断方法虽然具有更强的非线性特征提取能力和更好的泛化性,然而其模型的训练依赖于大量故障标记数据,致使其工业应用面临诸多挑战。本文提出的基于纹理损失与核范数正则化方法的特征增强迁移学习模型,能较好地适应信号间的多尺度特征差异,提高故障诊断精度。本文的主要研究内容包括以下几个方面:
+(1)针对源域与目标域之间多尺度特征分布差异问题,本文提出了一种基于纹理损失的滚动轴承故障诊断方法。该方法首先通过计算源域和目标域信号特征的Gram矩阵,捕捉信号的多尺度纹理信息。然后,通过最小化源域与目标域之间的Gram矩阵差异,实现多尺度特征的对齐。这种方法不仅能有效地提高模型在不同工况下的诊断精度,还增强了模型诊断的鲁棒性。
+(2)现有的特征提取方法多为单一尺度,忽视了多尺度故障模式,影响了模型在复杂环境中的适应性和鲁棒性。本文提出了特征增强网络MSRnet,设计了多尺度特征提取模块和扩张残差模块。该网络通过多尺度提取模块捕捉不同工况下的故障特征确保准确识别潜在故障;扩张残差模块扩大特征接收域,增强特征表达能力,避免了信息丢失问题。
+(3)在轴承故障诊断中,振动信号矩阵通常具有高维且复杂的特点,大部分数据稀疏且低秩且实际有效信息较少。为解决这一问题,本文提出了一种基于核范数正则化的方法应用于滚动轴承故障诊断。该方法通过矩阵低秩近似提取有效特征,去除冗余噪声,保留关键故障特征,从而提高诊断的准确性和可靠性。
+(4)本文方法在渥太华数据集及江南大学轴承数据集上进行了实验验证。实验结果表明,所提出的基于纹理损失与核范数正则化方法的特征增强迁移学习模型在加拿大渥太华大学轴承故障数据集上达到了98.58%的平均准确率,在江南大学轴承故障数据集上达到了98.11%的准确率,在故障诊断效率上均优于IJMMD、CCA、MQCCAF、LiConvformer、QCNN等八种轴承故障诊断方法;本文方法能更好地处理信号间的多尺度特征差异,并能有效提升滚动轴承故障诊断的准确性。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27805/d.cnki.gccgy.2025.000067
+DO 10.27805/d.cnki.gccgy.2025.000067
+
+RT Dissertation/Thesis
+SR 1
+A1 谢睿
+A3 邸若海;尹鹏
+PB 西安工业大学
+T1 基于深度学习的轴承故障诊断与剩余寿命预测方法研究及应用平台开发
+CL 硕士
+YR 2025
+IS 09
+K1 数据不平衡故障诊断;扩散模型;剩余寿命预测;多域特征融合;分位数回归
+AB 在旋转机械系统中,轴承作为核心传动组件,其运行状态的任何异常均可能引发连锁反应,对设备整体安全性与可靠性产生决定性影响。这类部件在多变的负载波动、温度梯度及颗粒污染等综合应力作用下,极易发生突发性失效或渐进性退化。一旦轴承发生故障,不仅造成设备非计划停机导致的直接经济损失,更可能因振动传递引发关键部件共振断裂或润滑系统失效等二次灾害,最终酿成重大安全事故。因此,针对轴承故障诊断与剩余寿命预测的研究具有重要的理论意义与实际价值。近年来,随着深度学习技术的发展,其在机械设备故障诊断与健康管理中的应用表现出极大的潜力,但如何在数据分布不平衡的情况下进行精准诊断、如何构建能精准反映轴承退化过程的健康指标以及如何在剩余使用寿命预测中得到可信度更高的预测结果是如今轴承故障诊断与剩余使用寿命预测领域的热点问题。针对上述问题,本文将轴承作为研究对象,利用深度学习技术对轴承故障诊断和剩余使用寿命预测技术的研究,主要内容如下:
+(1)针对轴承故障诊断中,由于样本分布不均衡引起的模型泛化能力差和诊断精度低的问题,本研究从提高数据质量和优化诊断模型两个方面入手。首先,在数据质量提升方面,提出了一种基于Transformer架构的扩散模型(Diffusion in Transformers,Di T),该模型能够有效生成和扩增故障样本;其次,在模型优化方面,结合双焦点损失(Dual Focal Loss,DFL)和卷积神经网络(Convolutional Neural Networks,CNN),提出了一种新型DFL-CNN模型。实验结果表明,所提方法在处理样本不均衡问题时,显著提高了轴承故障的诊断性能。在样本极度不平衡的情况下,DFL-CNN模型的表现显著优于传统CNN模型,有效减少了漏诊和误诊的发生。
+(2)在剩余使用寿命预测领域,针对轴承健康指标构建困难及预测结果可信度较低等问题,本研究提出了一种基于分位数回归和特征融合的轴承剩余使用寿命预测方法。首先,通过提取轴承全寿命周期的多域高维特征集,结合综合评价指标,筛选出能够全面反映轴承全寿命周期的关键特征;然后,采用堆栈降噪自编码器对这些筛选出的敏感特征进行融合,进而得到能够表征轴承退化过程的健康指标;随后,结合双向门控循环单元(Bidirectional Gated Recurrent Unit,Bi GRU)在处理时间序列信号方面的优势与Transformer对全局信息的关注,构建了并行Bi GRU-Transformer网络模型,用于预测轴承的剩余使用寿命;最后,针对预测结果可信度不足的问题,引入分位数回归方法,并将分位数损失函数作为预测模型的损失函数,通过预测不同概率分位点的剩余使用寿命,最终通过置信区间提升预测结果的可靠性。
+(3)基于PyQt5框架构建了轴承健康管理系统工程化平台,实现了理论研究成果向工业应用的转化。本系统通过模块化设计将前期研究中的数据增强算法、故障诊断模型、健康指标生成及寿命预测方法进行集成封装,形成具备完整功能的技术工具链。在架构设计层面,选择PyQt5作为开发框架因其具备跨平台特性与强大的GUI开发能力,能够满足工业现场对界面交互与算法执行的双重需求;功能规划方面,系统涵盖数据预处理、多域特征提取、故障诊断、健康状态评估及剩余寿命预测五大核心模块,并针对工程实用性增设了数据可视化、预测结果导出等辅助功能。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27391/d.cnki.gxagu.2025.000822
+DO 10.27391/d.cnki.gxagu.2025.000822
+
+RT Dissertation/Thesis
+SR 1
+A1 渠笑添
+A3 杨绍普;刘永强;武进雄
+PB 石家庄铁道大学
+T1 基于卷积神经网络的变转速工况轴承故障诊断方法研究
+CL 硕士
+YR 2025
+IS 11
+K1 轴承故障诊断;卷积神经网络;深度学习;孪生网络
+AB 作为保障机械设备安全运行的关键环节之一,滚动轴承故障诊断在实际应用中仍面临诸多挑战,如目标域数据稀缺导致模型泛化能力不足、变转速故障特征难以提取、传统诊断方法依赖人工经验等问题。针对以上问题,本文通过构建基于卷积神经网络的多任务故障诊断模型与双框架孪生网络迁移算法,提出了基于深度学习算法的智能诊断软件。本文的具体研究内容如下:
+(1)基于多任务学习的轴承故障诊断方法:针对变转速工况下轴承故障特征难以提取、单一诊断任务泛化性不足的问题,本文提出一种端到端”的多任务神经网络架构。该网络通过共享卷积层实现故障存在性检测与故障类型分类任务的识别,并利用特定任务全连接层实现诊断目标的差异化输出。实验结果表明多任务网络在轴承故障诊断方面的有效性,为工业场景下的故障监测提供了解决方案。
+(2)基于双框架孪生网络的无监督故障诊断方法:在目标域数据难以获取的场景下,本文设计了一种基于双框架孪生网络与卷积神经网络结合的故障诊断方法。通过对比源域与目标域之间的相似性,减少对目标域标注数据的依赖,进而实现无监督条件下的跨域故障诊断。
+(3)轴承故障诊断智能分析软件的开发:考虑到传统故障诊断方法效率低、依赖人工经验等问题,本文开发了一套基于深度学习算法的轴承故障诊断智能分析软件。该软件能够高效处理大量轴承振动信号数据,实现故障的精准分类与识别。
+论文研究结果有效解决了复杂工况下轴承故障特征弱提取、小样本场景诊断可靠性低等难题,对提升机械系统运行安全性、推动设备健康管理智能化转型具有重要的理论意义与工程应用价值。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27334/d.cnki.gstdy.2025.000601
+DO 10.27334/d.cnki.gstdy.2025.000601
+
+RT Dissertation/Thesis
+SR 1
+A1 胡怡帆
+A3 孙彦龙
+PB 石家庄铁道大学
+T1 基于深度学习的滚动轴承故障诊断与剩余寿命预测研究
+CL 硕士
+YR 2025
+IS 11
+K1 滚动轴承;深度学习;故障诊断;健康指标;剩余寿命预测
+AB 滚动轴承广泛应用于各类交通工具中,其安全性和可靠性对交通工具的运行至关重要。通过滚动轴承的故障诊断与剩余寿命预测,识别轴承的性能变化并以此为依据采取必要的维护措施,从而降低相关交通事故风险,提升交通系统的运行效率。近年来,随着人工智能技术的快速发展,深度学习方法在该领域取得了重要进展。然而,由于滚动轴承的数据复杂多变,现有方法在特征提取、退化过程表征以及预测精度等方面仍存在诸多不足。为此,针对上述问题,本文开展了基于深度学习的滚动轴承故障诊断与剩余寿命预测研究,主要研究内容如下:
+(1)针对滚动轴承故障诊断中单一域信号特征分析不充分和时频图像不规则特征提取困难的问题,提出了一种基于双通道特征提取的滚动轴承故障诊断方法。该方法首先设计了双通道特征提取架构,通道一采用长短期记忆网络学习频域信号间的潜在关系,提取一维频域特征,通道二采用可变形卷积网络和Transformer提取二维时频图像特征,充分融合不同维度的信号特征提高故障诊断的准确率。然后在时频图像不规则特征提取中,采用可变形卷积网络强化局部特征提取,利用Transformer捕捉局部特征间依赖关系以提取全局特征,通过局部-全局的联合作用实现对时频图像不规则特征的全面提取。最后通过凯斯西储大学轴承数据集验证了所提方法在提高故障诊断精度方面的有效性。
+(2)针对滚动轴承剩余寿命预测中健康指标提取不充分、无法有效表征轴承全寿命退化过程的问题,提出了基于多尺度残差卷积自编码器(Multi-Scale Residual Convolutional Autoencoder,MSR-CAE)的滚动轴承健康指标提取方法。该方法首先在传统卷积自编码器的基础上引入多尺度卷积,可不依赖先验知识实现高频振动信号细微变化和低频振动信号整体趋势的同时捕捉。同时在编码块和解码块间添加残差连接,避免了滚动轴承浅层特征的丢失,实现了健康指标的有效提取。其后改进MSR-CAE的损失函数不仅关注了重构数据的误差,还考虑了健康指标与寿命状态之间的映射关系,提高了健康指标对滚动轴承全寿命退化过程的表征能力。最后通过PHM2012数据集验证了所提方法的健康指标在单调性、相关性、鲁棒性和综合性方面的良好表现。
+(3)针对滚动轴承剩余寿命预测中因全局信息和关键信息关注不足导致预测精度低的问题,提出了基于结合双向门控循环单元(Bidirectional Gated Recurrent Unit,Bi GRU)和自注意力机制(Self-Attention Mechanism,SAM)的滚动轴承剩余寿命预测方法。该方法首先使用Bi GRU从前向和后向捕捉滚动轴承健康指标中的长短期依赖关系,综合全局信息同时考虑历史和未来数据对当前时间点预测的影响,提高了剩余寿命的预测精度。然后使用SAM动态调整各时间点预测信息的重要性权重,保证对预测结果至关重要的数据关注。其后在Bi GRU和SAM间添加Dropout层,防止预测模型的过拟合,进一步提升滚动轴承剩余寿命预测精度。最后通过PHM2012数据集验证了所提方法能有效降低剩余寿命预测误差。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27334/d.cnki.gstdy.2025.000165
+DO 10.27334/d.cnki.gstdy.2025.000165
+
+RT Dissertation/Thesis
+SR 1
+A1 李豪
+A3 马新娜;任亚恒
+PB 石家庄铁道大学
+T1 基于联邦学习的轴承故障诊断研究
+CL 硕士
+YR 2025
+IS 11
+K1 联邦学习;故障诊断;数据安全;数据异构;滚动轴承
+AB 滚动轴承在旋转机械系统中扮演着重要角色,其健康状况关系着设备运行的安全性和稳定性。虽然针对轴承故障诊断的研究已经从基于专家经验的人工方法向更加性能强大的基于数据驱动方法进行了转变,但是在实际工业的应用中仍面临着众多挑战。这些挑战表现在:故障样本的获取难度大且数量有限,数据分布呈现明显的异质性,数据隐私保护法规使得将数据进行集中管理成了遥不可及的工作。这些因素不仅限制了基于数据驱动模型的开发和部署,也使得智能故障诊断技术在实际工程应用中的发展受到制约。联邦学习为解决数据隐私保护与数据共享之间的矛盾提供了一种有效的解决方案,该技术的核心在于仅需交互模型参数,而无需共享私有数据。因此,基于联邦学习的轴承故障诊断方法具有重要的研究价值。
+本文首先解决了联邦系统存在的“投毒攻击”和特征提取问题,然后着手解决实际场景中的非独立同分布问题,最后对联邦系统的安全性进行改进并为解决变工况问题提供解决方案,本文详细研究内容如下:
+(1)针对联邦系统因低质量客户端对全局模型的诊断性能降低的“投毒攻击”问题,提出了一种联邦学习自适应方法,该方法能够为联邦学习的全局模型提供最优的聚合参数。为了增强本地模型对小样本数据的特征提取能力,设计了卷积神经网络和多头自注意力网络并行的特征提取方法,该方法使得本地模型不仅关注局部特征,对全局特征也进行了有效的提取。实验结果表明,所提方法在凯斯西储大学轴承数据集和西安交通大学轴承数据集上的平均诊断准确率优于传统联邦平均学习方法,仅次于集中式方法,验证了所提方法不仅具有优秀的特征提取能力而且有效避免了低质量客户端对系统的影响。
+(2)在不同的工业中,轴承的受损部位不同、运行环境不同,这导致了故障数据分布呈现出非独立同分布的特性。这导致每个用户的局部模型训练发散,使得聚合的全局模型偏离最优解。针对这一挑战,本文提出了一种基于动态聚类联邦学习的轴承故障诊断方法。该方法核心在于其个性化的三阶段架构,即动态参数选择、动态聚类和分层聚合。在参数优化阶段,系统通过自适应算法为各客户端配置最优训练参数;在动态聚类阶段,通过引入基于余弦相似度的K-means++聚类算法,将数据分布相似的客户端动态归入同一簇,从而在局部层面近似于独立同分布;在分层聚合阶段中采用双层聚合策略,先对簇内客户端模型进行局部聚合,再执行跨集群的全局聚合。实验结果表明,在Non-IID场景下,所提方法的诊断准确率、收敛速度以及模型稳定性都取得良好的性能表现。
+(3)针对传统中心化联邦学习存在的单点故障风险和端到端架构中变工况问题,提出了一种基于改进的MMD去中心化联邦学习方法。该方法通过引入端到端的对等架构摒弃了中央服务器,避免了传统中心化架构中服务器的单点故障风险。同时,为了解决客户端数据的变工况问题,提出了一种基于改进MMD的度量方法。该方法引入公开数据集,通过最小化各客户端与公开数据集之间的分布距离,间接实现了客户端间分布差异的拟合。在凯斯西储大学轴承数据集和帕德博恩大学数据集上实验结果表明,在引入改进的MMD度量机制后,所提模型能够应对端到端客户端之间的变工况问题,并且在新增客户端实验中验证了所提方法的稳定性。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27334/d.cnki.gstdy.2025.000599
+DO 10.27334/d.cnki.gstdy.2025.000599
+
+RT Dissertation/Thesis
+SR 1
+A1 陶旭
+A3 赵志宏;常生强
+PB 石家庄铁道大学
+T1 基于度量学习的小样本轴承故障诊断研究
+CL 硕士
+YR 2025
+IS 11
+K1 度量学习;小样本学习;故障诊断;对比学习;对抗学习
+AB 轴承是一种能够支撑和减少摩擦的机械元件,其运行状态关系到整个机械系统的安全稳定运行。如果轴承发生故障,可能会导致机器无法正常工作,甚至产生安全隐患。因此,对轴承的故障诊断至关重要。
+深度学习模型以其强大的特征提取能力,在处理复杂数据和识别故障模式时展现出了显著的优势。但在故障诊断领域,很难采集大量的故障样本数据,导致深度学习模型难以得到充分的训练,因此存在诊断准确率低、泛化性能低等问题。如何在小样本条件下对轴承进行故障诊断是一个具有挑战性的问题。度量学习是小样本学习中的一项关键的技术,通过构建样本间相似性度量函数,有效缓解了数据稀缺条件下的分类效果。
+针对故障诊断领域故障样本收集困难,深度学习模型在小样本条件下诊断准确率低、泛化性能低等问题,本文利用度量学习方法缓解小样本条件下的轴承故障诊断问题,提高小样本条件下的轴承故障诊断准确率。本文主要研究内容如下:
+(1)基于局部描述子的小样本轴承故障诊断研究。提出一种基于局部描述子的小样本轴承故障诊断方法(Enhanced Deep Nearest Neighbor Neural Network,E-ND4)。在DN4模型的基础上进行改进,引入Res Net12网络代替原来的特征提取模块,提高模型训练的稳定性。然后在第四层残差块后引入EMA注意力机制,使网络能够捕捉到更加细微的特征变化,提高故障诊断的准确性。为验证所提方法的有效性,分在凯斯西储大学轴承数据集、帕德博恩大学轴承数据集上进行实验验证,实验结果表明,本文所提方法在故障样本较少的情况下,可以有效的对故障进行分类,同时引入EMA注意力机制相较于原始的DN4模型进一步增强了故障诊断网络的特征提取能力,能有效的适应新任务,进而提高分类的准确率。
+(2)基于层级对比学习的小样本轴承故障诊断研究。提出了一种基于层级对比学习的小样本轴承故障诊断方法(Contrastive Multi-layer Brownian Distance Covariance,CMBDC),在布朗距离协方差度量方法的基础上,设计了层级对比学习模块,分别在特征提取的浅层和深层进行对比学习,缩小正样本对的距离,增大负样本对的距离,提高模型的分类能力以及泛化能力。为了进一步增强模型的表达能力,设计并行注意力融合模块,从不同的注意力维度对特征进行综合学习,捕捉类内信息。最后使用布朗距离协方差度量方法来计算查询集样本与支撑集样本的相似度,实现故障诊断。分别在凯斯西储大学轴承数据集、铁路货车轮对轴承数据集进行实验,结果表明所设计的模块可以提高故障诊断的准确率,更有效的表达数据特征。
+(3)基于对抗学习的双通道小样本轴承故障诊断研究。提出一种基于对抗学习的双通道小样本轴承故障诊断方法(Adversarial multi modality few-shot fault diagnosis,AMFSFD)。基于不同维度特征可以充分利用数据的多样性和互补性,获得更全面更准确的信息,分别提取一维振动信号特征、二维时频图像特征,通过设计的基于门控机制的动态融合模块来融合不同维度特征。再引入对抗学习方法,为查询集样本生成对抗样本,使得训练模型时可以抵御各种攻击和干扰,学习到更具鲁棒性的特征。分别在变转速滚动轴承数据集、凯斯西储大学轴承数据集上进行实验,均取得良好的故障诊断效果。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27334/d.cnki.gstdy.2025.000530
+DO 10.27334/d.cnki.gstdy.2025.000530
+
+RT Dissertation/Thesis
+SR 1
+A1 刘帅
+A3 乔卉卉;刘锋
+PB 石家庄铁道大学
+T1 不完备数据条件下基于深度学习的列车轮对轴承故障诊断方法研究
+CL 硕士
+YR 2025
+IS 11
+K1 不完备数据条件下;列车轮对轴承故障诊断;数据增强;域适应;域泛化
+AB 货运铁路运输的快速发展对货运列车的服役安全性要求越来越高。本文面向我国货运列车智能运维需求,以其关键部件轮对轴承为研究对象,针对列车轮对轴承故障样本难以获取、故障样本标签缺失和工况时变等因素导致的基于深度学习的故障诊断模型在实际工程中诊断精度不足的问题,分别基于数据增强、域适应和域泛化技术,研究不完备数据条件下基于深度学习的故障诊断方法。
+(1)针对轮对轴承故障样本难以获取的问题,提出了基于条件生成对抗网络的小样本故障诊断方法。通过构建生成对抗网络并使用Wasserstein距离的损失函数,避免了梯度消失现象,同时采用条件变分自编码器作为生成器,利用标签信息引导生成过程,保证样本质量及特定故障类别的生成。通过基于卷积注意力模块的诊断模型进行验证,结果表明该方法能显著增加样本数量、提高样本质量并增强模型的泛化能力,可提高小样本条件下轮对轴承的故障诊断准确率。
+(2)针对变工况条件下,测试集与训练集工况不同且测试集数据标签缺失的场景,本文提出了基于联合最大均值差异的对抗域适应网络故障诊断模型。首先构建了多尺度卷积通道注意力机制来提取多尺度特征;然后在传统对抗域适应网络的基础上引入联合最大均值差异损失函数,实现源域与目标域边缘概率分布和条件概率分布的联合域对齐。利用变工况列车轮对轴承故障数据集进行实验验证,通过与其他域适应方法进行对比实验,表明本章提出的方法可提高跨工况轴承故障诊断的准确率。
+(3)针对变工况条件下,测试集样本数据和标签都缺失的场景,研究基于域泛化的未知工况故障诊断方法。提出了基于频段多尺度自适应稀疏注意力机制的工况域泛化轴承故障诊断方法,该方法首先采用经验模态分解对振动信号进行自适应分解,提取包含不同频率段信号的本征模态分量。通过多尺度自适应稀疏注意力模块对各频段的本征模态分量进行特征提取和优化,再通过分类模块实现故障分类。通过未知工况条件下的列车轴承故障诊断实验,实验结果表明,本章提出的方法可提升未知工况条件下的轴承故障诊断正确率。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27334/d.cnki.gstdy.2025.000973
+DO 10.27334/d.cnki.gstdy.2025.000973
+
+RT Dissertation/Thesis
+SR 1
+A1 张旭阳
+A3 顾晓辉;陈彦宏
+PB 石家庄铁道大学
+T1 基于迁移学习的轮对轴承故障诊断方法研究
+CL 硕士
+YR 2025
+IS 11
+K1 轮对轴承;故障诊断;迁移学习;域适应;域泛化
+AB 轮对轴承作为铁路机车车辆中的关键旋转部件,其健康状态直接影响到列车的运行安全。因此,针对轮对轴承的故障诊断和健康管理在机车车辆运维中尤为重要。近年来,许多学者针对数据驱动的故障诊断方法进行了广泛研究,然而,列车运行环境复杂、故障数据稀缺,极大地限制了高精度智能诊断模型的训练与应用。迁移学习作为一种新的机器学习范式,通过从相关但不同的领域中获取知识,来增强模型的泛化能力。但当不同场景下的数据存在分布差异时,从源域(训练集)中学习到的知识无法有效直接应用到目标域(测试集)中。因此,本文研究了迁移学习中的域适应方法和域泛化方法,旨在提高轮对轴承故障诊断模型的鲁棒性和泛化能力。具体研究内容如下:
+(1)针对从通用轴承数据到轮对轴承数据的迁移诊断问题,提出了一种无监督的动态对抗联合域适应方法,以提高跨异构对象的迁移能力。首先,基于Laplace卷积核和Inception模块构建了多尺度的特征提取器用于提取域不变特征。其次,发展了一种联合特征和对抗的迁移方法,并同时考虑了源域和目标域数据的边缘分布和条件分布差异。再次,提出了一种多损失的动态权重分配机制,用于域适应过程中最大均值差异损失、条件最大均值差异损失和对抗损失的交互。最后,利用西储大学轴承数据集、辛辛那提大学轴承数据集和石家庄铁道大学轮对轴承滚振实验数据集验证了所提方法在跨对象迁移诊断中有效性和优越性。
+(2)针对域适应方法需要无标记的目标域数据用于模型训练的问题,进一步研究了结合轮对轴承仿真数据和实验数据的域泛化方法,以解决轮对轴承故障样本稀缺的问题。首先,基于目标域轮对轴承的正常数据和仿真数据构建了补充源域数据集。其次,在前文所提模型的基础上,进一步引入因果分解机制,确保模型学习的同类样本特征具有高相关性,并提高模型在未知目标域中的泛化能力。最后,基于石家庄铁道大学轮对轴承滚振实验数据集和轮对轴承跑合实验数据集设计了多组域泛化实验,验证了所提方法的有效性。
+(3)基于前文研究的方法,利用QT Pyside2设计开发了一个直观、易于理解和操作的智能诊断系统用于轮对轴承的健康状态识别。用户只需在系统中加载待处理的轮对轴承数据,即可启动故障诊断流程,并实时查看诊断结果。该系统的应用不仅提高了轮对轴承的故障诊断效率,还为铁路机车车辆的运维管理提供了有力的技术支撑。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27334/d.cnki.gstdy.2025.000319
+DO 10.27334/d.cnki.gstdy.2025.000319
+
+RT Dissertation/Thesis
+SR 1
+A1 毋毓斌
+A3 刘远红;陆鸿志
+PB 东北石油大学
+T1 基于概率度量与高斯混合模型的轴承故障诊断方法
+CL 硕士
+YR 2025
+IS 11
+K1 流形学习;概率模型;特征提取;轴承故障诊断
+AB 轴承是工业制造过程中具有广泛用途的部件,轴承的运行状况对设备运行会产生很大影响,及时监测与诊断轴承运行问题具有深远的意义。随着检测技术的升级迭代,使得轴承故障数据普遍呈现维度高、数据量庞大的特点。如何从大量数据中高效挖掘故障特征,提高智能算法的分类效果,成为轴承故障诊断领域的难题。本文通过对流形学习相关算法进行深入研究,在高斯混合模型(Gaussian mixture model,GMM)与概率度量的研究基础上,并与局部线性嵌入(Locally Linear Embedding,LLE)算法进行结合,完成轴承故障诊断,本文主要研究内容如下:
+(1)针对局部线性嵌入算法仅对故障数据局部进行特征提取,从而损失数据全局主要特征的问题,提出基于高斯混合模型的全局与局部特征提取方法(Global and Local Feature Extraction Method Based on Gaussian Mixture Model,GLFE),该算法通过高斯混合模型提取故障数据的全局特征,t-SNE算法提取局部特征,融合局部线性嵌入算法,最小化全局特征与局部特征之间的误差,从而充分提取故障数据特征,改进了LLE算法提取特征单一的问题,同时捕获全局分布规律与局部流形特征,全面刻画故障状态的特征。实验结果表明,GLFE算法能够有效提取轴承故障特征;
+(2)针对故障数据特征复杂以及高维数据使用线性拟合并不合适的问题,提出基于概率模型与信息熵的局部线性嵌入算法(Local Linear Embedding Algorithm Based on Probability Model and Information Entropy,PIE-LLE),该算法使用概率度量改进LLE算法的欧氏距离度量,同时通过信息熵判断每个样本点包含的信息量,使邻域点判断更加合理,符合原始数据的分布特征,降低算法特征提取过程中的误差。可视化与聚类实验结果表明,该算法可以有效区分不同故障;
+(3)从轴承故障实验平台上收集故障数据,并将以上两种优化算法应用在轴承振动故障数据集上,提出滚动轴承故障诊断方案,验证以上两种算法在实际应用场景下的特征提取效果,实验结果表明所提出算法能明确区分四种故障,诊断准确率在95%以上,能够满足故障诊断的要求,达到了良好的故障诊断效果。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.26995/d.cnki.gdqsc.2025.000797
+DO 10.26995/d.cnki.gdqsc.2025.000797
+
+RT Dissertation/Thesis
+SR 1
+A1 耿源浩
+A3 唐刚
+PB 北京化工大学
+T1 基于联合分布对齐对抗迁移的轴承故障诊断方法研究
+CL 硕士
+YR 2025
+IS 09
+K1 对抗迁移;开集故障诊断;未知工况;滚动轴承
+AB 滚动轴承作为旋转机械正常运行所必不可少的关键部件,多运行在较为复杂和严峻的工况下,一旦出现故障,就会导致重大的经济损失和人员伤亡,因此为保障工业生产的正常运行,需要对滚动轴承开展故障诊断方法研究。这些年随着人工智能技术和故障诊断领域的结合,基于迁移学习技术的智能故障诊断方法通过充足的源域标记数据完成了从源域到目标域的跨域故障诊断。但在实际的故障诊断场景中,现有诊断模型仍会面临源域数据标记信息不足、目标域中存在未知故障类型以及未知工况下不具备先验数据分布等问题。因此,仍需要进一步研究以解决这些难点。本文基于迁移学习技术,通过将对抗学习算法和联合分布对齐机制结合起来作为总体思路,开展了针对上述问题的研究。主要研究内容如下:
+(1)针对现有诊断模型在实际工业场景中缺少数据标签的问题,面向无监督迁移场景,提出了一种基于均值方差结合指标的联合分布对齐条件对抗迁移网络。基于所构造的均方指标以更好地度量分布差异,共同对齐不同域之间的边缘分布和条件分布。搭建残差特征提取网络充分提取故障特征,结合改进条件对抗域判别器充分捕获故障数据中的复杂多模态结构,最终通过构建的增强分类器实现更好的分类效果。在三个轴承数据集上开展了跨工况诊断任务,所提方法的优势由比较对比方法证明。
+(2)针对所具备的训练数据不完备,导致测试数据中出现了未知故障类型即开集故障诊断问题,提出了一种基于三重混合指标的联合分布对齐对抗迁移网络。基于所构造的三重指标综合考虑均值方差以及协方差,从而更好地对齐不同域之间的联合分布。设计了一种特征增强提取分类对抗网络,其中的特征提取器在网络首个卷积层上设置了宽的卷积核和长的步长,自动学习面向诊断的特征,并去除对诊断无用的特征;结合开集域判别器额外构造域对抗损失以约束模型的优化过程;最终通过构建的宽决策裕度分类器实现样本精确分类。在两个轴承数据集上开展了开集跨工况诊断任务,所提方法的优势由比较方法对比证明。
+(3)针对所面临的目标未知工况下不具备先验数据分布的问题,提出了一种基于双方差指标的联合分布对齐对抗迁移网络。基于所构造的双方差指标实现多个源域之间的联合分布对齐。所设计的改进三联组损失在细粒度上实现了故障类别间分类的类内紧凑性和类间可分性。通过特征提取器提取多个源域的特征,结合所构建的组合标签分类器的分类损失以及域判别器的对抗损失进行模型的整体约束,这种组合标签分类器能够考虑不同源域之间的特异性,故能实现更好的分类效果。在三个轴承数据集上开展了未知工况下的诊断任务,所提方法的优势由比较方法对比证明。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.26939/d.cnki.gbhgu.2025.001106
+DO 10.26939/d.cnki.gbhgu.2025.001106
+
+RT Journal Article
+SR 1
+A1 Lei Fu;Zepeng Ma;Libin Zhang;Dapeng Tan
+AD College of Mechanical Engineering, Zhejiang University of Technology, Hangzhou 310023, China;Key Laboratory of Special Purpose Equipment and Advanced Manufacturing Technology, Ministry of Education & Zhejiang Province, Zhejiang University of Technology, China;Taizhou Key Laboratory of Advanced Manufacturing Technology, Taizhou Institute, Zhejiang University of Technology, Taizhou 318014, China
+T1 Cross layer-scale fault diagnosis with unsupervised criteria for maximizing information and minimizing redundancy
+JF Expert Systems With Applications
+YR 2025
+vo 286
+OP 127775-127775
+K1 Bearing fault diagnosis;Adaptive slope edge filter;Kernel fuzzy-rough set;Attribute reduction;Cross-LayerScale
+AB Early detection of bearing defects is crucial for proactive maintenance and cost reduction. Signal decomposition techniques are widely used to adaptively extract fault components from complex vibration signals, effectively locating and assessing fault damage. However, key challenges in existing methods include: (1) Global smoothing filters often fail to capture local fault features, obscuring fault pulses and periodic characteristics. (2) Statistical indicators (such as kurtosis and Gini index) cannot simultaneously represent impulsiveness and cyclostationarity, while multi-feature reconstruction methods overlook feature homogeneity in high-dimensional space, causing redundancy and reducing recognition capability. (3) Most methods adaptively select only one frequency band, resulting in incomplete fault component extraction. Therefore, this paper proposes a Cross Layer-Scale reconstruction (CLSR) scheme. It includes an Adaptive Slope Edge Filter (ASEF) to capture pulse and sharp-edge features without prior par...
+SN 0957-4174
+DS CNKI
+LK https://link.cnki.net/doi/10.1016/J.ESWA.2025.127775
+DO 10.1016/J.ESWA.2025.127775
+
+RT Journal Article
+SR 1
+A1 Guoli Bai;Tonghao Xing;Wei Sun;Huashan Chi;Zhidan Zhong;Qingchao Sun;Liang Sun
+AD School of Mechanical Engineering, Dalian University of Technology, Dalian, 116023, China;Luoyang Research Institute, Dalian University of Technology, Luoyang, 471000, China;School of Mechanical and Electrical Engineering, Henan University of Science and Technology, Luoyang, 471000, China;School of Mechanical Engineering,Dalian University of Technology,Dalian,116023,China
+T1 Unsupervised multiple-target domain adaptation for bearing fault diagnosis
+JF Engineering Applications of Artificial Intelligence
+YR 2025
+vo 154
+OP 111063-111063
+K1 Domain adaptation;Fault diagnosis;Single-source multiple-target domain adaptation;Unsupervised domain adaptation
+AB Data-driven bearing fault diagnosis methods have gained significant attention due to their high accuracy and minimal reliance on expert knowledge. However, models trained on the data collected under single working conditions often assume independent and identically distributed data, limiting their generalization ability in real-world scenarios where varying working conditions introduce challenges such as domain shift and unlabeled data. Unsupervised domain adaptation is an effective method for addressing these challenges by training classifiers using labeled source domain data and unlabeled target domain data. However, current domain adaptation fault diagnosis methods are typically limited to single-source and single-target scenarios. When multiple unlabeled working conditions are involved, it becomes difficult to simultaneously ensure the domain invariance and the fault relevance of features. This paper proposes a fault diagnosis method across multiple unlabeled working conditions. The method extracts featur...
+SN 0952-1976
+DS CNKI
+LK https://link.cnki.net/doi/10.1016/J.ENGAPPAI.2025.111063
+DO 10.1016/J.ENGAPPAI.2025.111063
+
+RT Journal Article
+SR 1
+A1 Qi Chang;Congcong Fang;Wei Zhou;Xianghui Meng
+AD School of Traffic and Transportation Engineering, Central South University, Changsha, Hunan, China;School of Mechanical Engineering, Shanghai Jiao Tong University, Shanghai, China
+T1 A multi-order moment matching-based unsupervised domain adaptation with application to cross-working condition fault diagnosis of rolling bearings
+JF Structural Health Monitoring
+YR 2025
+IS 3
+vo 24
+OP 1438-1455
+K1 Bearing fault diagnosis;cross-working condition;domain adaptation;discriminative clustering;hybrid domain alignment;multi-order moment matching
+AB Unsupervised domain adaptation-based transfer learning (TL) has been widely used in rolling bearing fault diagnosis to overcome the problem of limited and non-identically distributed labeled data. Discrepancy-based alignment is a popular domain adaptation method in TL. However, due to the inability to completely eliminate domain drift, the classifier learned from the source domain may easily misclassify some target domain samples that are scattered near the decision edge. In this work, a multi-order moment matching-based domain adaptation is proposed to address the issue. Low- and high-order moment matching is simultaneously applied to describe the complex non-Gaussian distributions in more detail and realize coarse- and fine-grained hybrid domain alignment. Furthermore, a discriminative clustering approach is employed to extract domain-invariant features of inter-class discrimination and intra-class compactness, which effectively reduces the negative transfer caused by hard-aligned target samples. The applic...
+SN 1475-9217
+DS CNKI
+LK https://link.cnki.net/doi/10.1177/14759217241262386
+DO 10.1177/14759217241262386
+
+RT Journal Article
+SR 1
+A1 Kaitong Jia;Xin Wen;Gang Chen
+AD Shien-Ming Wu School of Intelligent Engineering, South China University of Technology, Guangzhou, Guangdong Province, 511442, P.R. China
+T1 Interpretable Knowledge Transfer with a Novel Structure Discrepancy Metrics for Unsupervised Bearing Fault Diagnosis from Simulation to Reality
+JF Journal of Physics: Conference Series
+YR 2025
+IS 1
+vo 3024
+OP 012003-012003
+AB This paper introduces a novel interpretable transfer learning framework, based on Wavelet Temporal Logic Network (WTLN) encoder, which leverages temporal logic for interpretable knowledge transfer in rolling element bearings fault diagnosis. Unlike traditional approaches, WTLN integrates Weighted Signal Temporal Logic (wSTL) with dynamic learning capabilities to robustly encode and interpret signal behaviors under varying conditions. The model uniquely combines a Temporal Logic Discrepancy Metric (TLDM) for enhanced loss function definition to address the challenges of transfer learning and knowledge structure alignment in fault diagnosis. Extensive experiments conducted with both simulated and real-world datasets show that the model is highly effective in diagnosing bearing faults under various operational conditions. By combining the WTLN with TLDM, the model achieves not only high diagnostic accuracy but also provides interpretability. This interpretability is vital for real-world applications, where it is...
+SN 1742-6588
+DS CNKI
+LK https://link.cnki.net/doi/10.1088/1742-6596/3024/1/012003
+DO 10.1088/1742-6596/3024/1/012003
+
+RT Dissertation/Thesis
+SR 1
+A1 陈莹洁
+A3 林培光;单承刚
+PB 山东财经大学
+T1 基于深度学习的滚动轴承故障诊断系统研究与实现
+CL 硕士
+YR 2025
+IS 09
+K1 深度学习;迁移学习;故障诊断;卷积神经网络;门控循环单元;注意力机制;域对抗自适应;Web系统开发
+AB 在现代工业体系中,轴承作为各类旋转机械设备不可或缺的关键零部件,广泛应用于众多重要领域,其工作状态直接影响着整个设备的运行状况。在机械设备中,轴承部件的磨损通常比较大,轴承工作环境又比较复杂,因此轴承也成为机械设备中最易发生故障的部件之一。对轴承故障进行实时诊断和及时发现,是保障机械设备稳定、精准运行的极其重要的一环。通过分析轴承运转过程中产生的振动信号来判断轴承的健康状态,是目前进行故障诊断的主要思路。随着人工智能技术的不断进步,特别是深度学习的快速发展,基于机器学习、深度学习的方法成为分析振动信号这类具有显著时间序列特征的数据的主流方法,深入研究基于深度学习的轴承故障诊断方法具有重要意义。目前轴承故障诊断还面临着一些亟待解决的问题。一方面,工业现场环境复杂,存在大量的环境噪声,这会干扰轴承故障信号的采集和分析。另一方面,不同工况下轴承的运行状态和故障特征存在差异,现有的故障诊断方法在直接处理跨工况数据时往往难以取得理想的效果。为了解决以上问题,本文对基于深度学习的轴承故障诊断方法展开深入研究,提出基于多尺度特征融合的强噪声故障诊断方法和基于深度迁移学习的跨工况故障诊断方法,并应用所提出的算法开发了轴承故障诊断工具,实现了高效的轴承故障诊断。
+为了提高强噪声环境下轴承故障诊断的准确率,本文提出了一种基于多尺度特征融合的强噪声轴承故障诊断模型:MSA-Bi GRU,该模型采取重叠采样策略进行数据增强,直接利用原始振动数据进行端到端的轴承故障诊断。首先,模型利用多尺度卷积从输入的原始振动信号中提取出不同尺度的特征,并进行特征融合;接着,模型的双向门控循环单元层负责进一步处理提取的特征序列,然后,利用自注意力机制,挖掘信号内部关联信息,进行特征增强;最后,使用全连接层和softmax函数进行故障分类。实验结果表明,本文所提方法准确率达到99%以上,在强噪声环境也能够准确地识别轴承的故障类型,平均准确率98%,远高于机器学习方法,相较于于其他深度学习网络提高了2%,有效提高了轴承故障诊断的准确率和可靠性,消融实验表明验证了模型各模块的有效性,各部分共同协作可以使模型达到最佳的性能。
+针对变工况下的滚动轴承故障诊断的问题,本文提出了一种提出了一种融合了通道注意力机制的深度可分离卷积网络与对抗域适应网络相结合的跨工况故障诊断方法:FFT-Light DANN。首先,深度可分离卷积可以在减少模型参数数量和计算量的同时,保持较高的特征提取能力。其次,在深度可分离卷积内部嵌入了通道注意力机制,进行特征增强。最后,对模型进行抗域自适应训练,使得模型能够在目标域中利用源域的知识进行准确的故障诊断。本文在两个公开的轴承故障数据集上进行实验,实验结果表明,所提出的跨工况故障诊断方法在跨工况故障诊断任务中能够更精准地识别出设备在不同工况下的故障类型,平均准确率达到98.39%。
+在前期研究的基础上,本研究进一步开发了基于前后端分离框架的轴承故障诊断工具。该工具系统采用现代化的Web技术,前端采用Vue.js技术实现用户交互和数据展示,后端采用Django技术调用所提出的算法,实现了轴承健康的在线监测与故障诊断。该系统的为工业生产中设备维护管理提供了高效智能的解决方案,有助于降低维护成本,提高生产效率,保障设备安全运行。总体而言,本文的研究成果为工业故障诊断领域的发展提供了新的方法和解决方案。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27274/d.cnki.gsdjc.2025.000816
+DO 10.27274/d.cnki.gsdjc.2025.000816
+
+RT Dissertation/Thesis
+SR 1
+A1 吕智明
+A3 朱孙科
+PB 重庆交通大学
+T1 基于深度域适应的滚动轴承故障诊断方法研究
+CL 硕士
+YR 2025
+IS 11
+K1 滚动轴承;故障诊断;深度域适应;多源域域泛化;故障诊断系统
+AB 滚动轴承作为关键机械零部件,广泛应用与风力涡轮机、高速列车、航空发动机等重要系统中,其可靠性对于这些设备的稳定运行有着重要意义。如果滚动轴承在运行过程中出现疲劳退化、裂纹、变形等故障,而未及时修复,可能导致整个系统严重损坏,容易造成严重的经济损失,甚至会造成人员伤亡。深度学习技术的发展为提前发现和识别滚动轴承故障提供了可能,然而,在实际工业环境中,机械设备常处于复杂多变的工作条件下,一方面难以获得大量高质量的含标签数据,另一方面深度学习模型在特定数据集上训练后,可能在遇到新环境或新条件的数据时表现不理想。针对上述挑战,本文将深度域适应技术应用于滚动轴承故障诊断问题,旨在提升模型在不同场景下的故障诊断性能,对于设备高可靠和长寿命运行具有重要意义。
+以旋转机械中的滚动轴承为研究对象,针对跨工况数据分布存在差异且目标域无标签的问题,提出基于深度域适应的跨工况故障诊断方法;之后,针对模型训练过程中目标域数据不可见的问题,提出了一种基于多源域泛化的未知工况故障诊断方法;接着,在实际工业场景数据集上对所提故障诊断方法进行了验证;最后,构建了滚动轴承故障诊断软件系统。论文的主要研究内容如下:
+(1)在提出的多小波核卷积层基础上,构建了第一阶段的特征提取网络,并通过域判别器提取源域与目标域之间的域不变特征。采用双路卷积结构构建第二阶段特征提取网络,并提出了一种结合最大均方差异和对数相关对齐的新型损失函数,度量融合差异,从而减小源域与目标域之间的特征分布差异,实现全局与局部层面的特征对齐。在两个滚动轴承数据集上,从单源域迁移和多源域迁移两个角度进行了实验验证,结果表明,所提方法的平均准确率均优于对比方法,并在迁移实验中展示了更强的鲁棒性。
+(2)构建了域不变特征提取网络,并提出了一种改进的损失函数,局部最大均方差异,用于对齐多个源域之间的子域分布。同时,通过域判别器构建了源域之间的域不变特征表示,并结合交叉熵分类损失,形成了协同优化机制,使得模型能够提取具有跨域泛化能力的特征。在两个滚动轴承数据集上进行的域泛化实验表明,所提方法在所有域泛化任务中均取得了最高的诊断准确率,验证了该方法能够有效提取多源域间的不变特征表示,提升了模型在面对未知工况数据时的诊断准确率,具有一定的实际应用价值。
+(3)在实际工业数据集上进行实验验证,以评估本文提出的两种故障诊断方法。针对不同问题,设计了单源域迁移和多源域迁移实验,以解决跨工况数据分布差异且目标域无标签的问题;并设计了多源域泛化实验,解决目标域数据不可见的问题。实验结果表明,本文方法在两种场景下均优于其他经典方法,表现出最佳的诊断性能。
+(4)在上述两种故障诊断方法的基础上,基于Py Qt5设计并实现了一个滚动轴承故障诊断软件系统。该系统集成了本文提出的故障诊断模型,具备数据可视化、数据预处理、特征频率计算和故障诊断等功能,对于加深对本文方法的理解及其实际应用具有重要意义。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27671/d.cnki.gcjtc.2025.001577
+DO 10.27671/d.cnki.gcjtc.2025.001577
+
+RT Dissertation/Thesis
+SR 1
+A1 谭海冰
+A3 梁伟
+PB 重庆交通大学
+T1 基于改进的多尺度残差网络与迁移学习的轴承故障诊断研究
+CL 硕士
+YR 2025
+IS 11
+K1 故障诊断;滚动轴承;深度学习;多尺度卷积神经网络;迁移学习
+AB 在工业自动化和智能制造快速发展的背景下,滚动轴承作为机械设备的核心部件,其故障诊断对于保障设备正常、高效运行至关重要。传统故障诊断方法依赖人工信号处理和专家经验,存在诊断过程繁琐、耗时且易受主观判断影响等缺点,难以满足现代工业需求。因此,本文以滚动轴承振动信号入手,运用信号处理与深度学习技术,深入开展故障诊断研究,以提高诊断的准确性、效率和智能化水平,降低设备故障带来的经济损失和安全风险。
+本文的主要研究内容和成果如下:
+(1)为解决原始振动信号易受噪声干扰、时域特征提取不充分及卷积神经网络(CNN)图像处理优势未充分发挥的问题,提出将振动信号转换为图像的方法,并对比连续小波变换(CWT)、短时傅里叶变换(STFT)、马尔科夫转移场(MTF)和递归图(RP)四种图像转换方法,结果表明STFT方法在多尺度残差卷积神经网络中分类准确率与计算效率上综合最优。在此基础上,针对传统多尺度提取模块因固定卷积核导致的信息捕获能力受限、感受野不足及特征丢失问题,提出改进的多尺度特征融合模块,通过引入空洞卷积核在维持计算量的同时扩大感受野,结合可变形卷积层动态调整卷积核形状与采样位置,增强特征提取灵活性,实验验证改进模型具有更强的抗噪性能。
+(2)针对变工况数据分布差异导致的性能退化,提出基于迁移学习的跨工况诊断方法。以改进多尺度残差网络为骨干,结合局部最大均值差异(LMMD)对齐源域与目标域特征分布,实现知识迁移。实验表明,所提方法平均准确率达显著优于DDC、JAN等主流算法,有效解决了工况差异导致的准确率下降问题。
+(3)针对不同设备间源域和目标域数据特征分布偏移较大、标注成本高的问题,基于前述改进的多尺度残差卷积神经网络,构建了对抗迁移学习的跨设备诊断框架。通过引入最大-最小熵正则化约束,降低源域和目标域间的特征分布差异,并联合多核最大均值差异(MK-MMD)进一步缩小分布距离,减少对目标域数据标注的依赖,为跨设备轴承故障诊断标注成本高的问题提供有效解决方案。
+(4)为了给上述故障诊断算法提供高效便捷的展示与验证环境,设计了轴承故障诊断系统,涵盖数据获取、数据预处理、模型训练及可视化、测试四个核心功能模块。并采用西储大学轴承数据集进行验证与演示,直观展示了系统的功能和应用效果。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27671/d.cnki.gcjtc.2025.001038
+DO 10.27671/d.cnki.gcjtc.2025.001038
+
+RT Dissertation/Thesis
+SR 1
+A1 黄嘉龙
+A3 景建平;凡时财
+PB 电子科技大学
+T1 基于领域泛化的轴承故障诊断方法研究
+CL 硕士
+YR 2025
+IS 09
+K1 轴承故障诊断;领域泛化;最大均值差异损失;三元组损失;裕度差异损失
+AB 轴承作为工业设备的核心传动部件,其故障诊断对保障生产安全具有重要工程价值。传统方法在跨域泛化场景下面临单源域数据稀缺、跨工况分布差异较大及多源域过拟合特定源域的三重问题。本研究从领域泛化理论出发解决上述问题,主要创新如下:
+(1)针对变工况轴承故障诊断中单源域数据稀疏性导致预测精度低的难题,构建了融合多模态特征与对抗生成网络的跨域数据增强框架(Multi-Domain WGAN-GP,MDWGANGP),旨在通过结合一维时序信号和二维图像特征,并利用结合梯度惩罚的基于梯度约束的Wasserstein对抗网络生成质量较高的训练数据。实验结果显示,本章跨域数据增强框架平均准确率达到85.78%,比最优基线方法提升3.6%,在准确性和可靠性上优于单一信息域特征提取,有效解决源域数据不足问题,并为后续诊断任务提供了可靠的增强数据集。
+(2)针对不同工况下轴承信号分布差异较大导致域偏移的问题,提出了基于多损失协同优化的跨域轴承故障诊断方法(Hierarchical Alignment Framework for Multi-Domain WGAN-GP,HAF-MDWGANGP)。该方法在交叉熵损失的基础上结合最大均值差异损失、三元组损失和裕度差异损失。通过交叉熵损失保持分类判别性,最大均值差异损失对齐全局分布,三元组损失约束类内紧凑性,裕度差异损失增强决策边界可分性。实验验证看出,该方法在复杂工况下的平均准确率达89.24%,实验结果表明多损失协同优化策略对域不变特征提取的有效性。
+(3)针对现有方法易过拟合多源域中的特定源域导致泛化鲁棒性不足的问题,提出了基于自适应多源集成的跨域轴承故障诊断方法(Adaptive Multi-Source Ensemble Domain Generalization,AMSEDG)。区别于传统的单一策略方法,基于自适应多源集成的跨域轴承故障诊断方法通过多层次不变特征学习和基于动态相似性的加权集成策略,解决多源域异构条件下旋转机械故障诊断的领域泛化问题。在多源域情况下,基于自适应多源集成的跨域轴承故障诊断方法以95.1%的平均准确率超越8种对比方法,表明其在多源协同泛化方面的优势。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27005/d.cnki.gdzku.2025.005017
+DO 10.27005/d.cnki.gdzku.2025.005017
+
+RT Dissertation/Thesis
+SR 1
+A1 刘贵毅
+A3 张超
+PB 内蒙古科技大学
+T1 变转速工况下滚动轴承故障诊断方法研究
+CL 硕士
+YR 2025
+IS 09
+K1 故障诊断;滚动轴承;阶次分析;VSFD-Net;时变迁移学习
+AB 滚动轴承是机械系统中关键部件之一,其工作状态直接影响设备运行稳定性和安全性。在变转速工况下,轴承的振动信号特征随转速变化而呈现非平稳特性。传统基于恒定转速的故障诊断方法难以有效识别这些特征,导致诊断的准确性和可靠性大幅下降。因此,研究适用于变转速工况的滚动轴承故障诊断方法尤为重要。
+本文首先归纳总结了国内外基于信号处理、机器学习和深度学习的滚动轴承故障诊断研究现状,以及变转速工况下滚动轴承故障诊断的研究现状。总结发现,变转速工况下的滚动轴承故障诊断方法存在故障特征难以提取与传统方法失效问题,这已成为故障诊断的主要瓶颈。
+针对实际工况下转速信号难以获取的问题,本文提出了一种结合阶次分析和短时傅里叶变换的方法。首先,研究了滚动轴承在变转速工况下的故障特征,并采用短时傅里叶变换方法获得时频图。根据轴承参数和速度范围计算旋转频率,利用阶次分析将变转速工况下的时域振动信号转换为阶次域信号,从而提取与故障相关的特征。通过实验数据验证该方法的有效性,并基于MATLAB设计了一套界面简洁、易于操作的故障诊断系统。
+针对传统信号处理方法在故障诊断中对多故障模式和非线性系统的局限性,本文提出了变转速故障诊断框架。首先,提出了一种可分离的多尺度卷积模块,用于提取多局部感受野特征,从而减少训练过程中的学习参数和计算量。其次,开发了一种广播自注意模块,用于捕捉信号全局范围内的关键细粒度特征,同时避免了矩阵乘法和多维指数相乘等复杂运算。通过在公开数据集和实验室数据上的实验验证,结果表明该框架相较于现有的深度学习网络模型具有显著优势,表现出轻量化和鲁棒性。
+针对传统故障诊断方法主要依赖专家经验和信号处理技术,以及跨域泛化能力不足问题,本文提出了一种基于时变迁移学习网络的滚动轴承故障诊断方法,以解决这些不足。首先,利用多尺度稀疏正则化模块,有效降低速度波动。其次,采用幅值激活函数以提高对不同标签数据的区分能力。然后,采用峭度最大均值差方法,通过根据数据峭度值自适应调整高斯核函数以增强域适应能力。最后,采用动态KL散度权重机制动态平衡距离与对抗度量,从而提升模型的收敛性与稳定性。在同一设备和跨设备场景下,通过实验对所提方法的有效性进行验证,并将结果与其他方法进行比较。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27724/d.cnki.gnmgk.2025.000493
+DO 10.27724/d.cnki.gnmgk.2025.000493
+
+RT Dissertation/Thesis
+SR 1
+A1 杨国军
+A3 谢怡宁
+PB 东北林业大学
+T1 基于数据增强和不变特征提取的故障诊断域泛化方法研究
+CL 硕士
+YR 2025
+IS 11
+K1 故障诊断;域泛化;域不变特征;多模态融合;滚动轴承
+AB 随着工业智能化的不断发展,滚动轴承作为机械设备中的关键部件,广泛应用于各类工业设备中。准确、及时地检测和诊断滚动轴承故障,对于保证设备的稳定运行、提高生产效率、降低维护成本、延长设备寿命具有重要意义。尽管基于数据驱动的故障诊断方法在滚动轴承故障检测中取得了显著进展,其性能仍然面临一些关键挑战。传统方法通常依赖于大量的标注数据进行训练,这导致训练数据的不平衡性和领域偏移问题。滚动轴承的故障模式复杂多变,且不同工况下的故障表现差异较大,单一数据形式(如一维振动信号或二维时频图像)很难全面涵盖所有潜在的故障模式,这限制了模型的泛化能力。针对上述问题,本研究提出了三种创新性的方法,旨在提升滚动轴承故障诊断模型的域泛化能力。主要研究内容如下:
+(1)针对模型训练时常面临数据不平衡及难以适应不同工况的问题,提出一种基于风险感知归一化增强的滚动轴承故障诊断域泛化方法(RNA-BDG)。该方法通过结合数据增强技术和风险感知策略,避免传统增强方法可能产生的高风险数据。风险感知策略在数据增强过程中根据不同增强数据风险值,选择更具多样性的低风险样本。为验证该方法有效性,在CWRU数据集和JNU数据集上进行对比试验,达到93.77%和91.05%的跨域准确率。此外,设置消融实验验证方法合理性并进行超参数灵敏度分析。
+(2)针对难以去除无关特征,保留有效特征的问题,提出一种基于不变特征净化的滚动轴承故障诊断域泛化方法。该方法通过优化纠缠损失去除域相关特征,并结合对抗净纯化模块去除无效特征。在CWRU数据集和NEFU＿FDDG数据集上进行对比试验,本方法分别达到99.28%和73.03%的域泛化准确率。设计消融实验结果探讨该方法有效性,并通过特征可视化对模型泛化结果进行深度探究,最后对关键超参数进行灵敏度分析。
+(3)针对仅单一模态数据不完全包含故障特征的问题,提出一种基于多模态融合的滚动轴承故障诊断域泛化方法。该方法结合一维振动信号和二维时频图像的特征,利用知识蒸馏技术进行数据融合,以挖掘不同模态数据的互补性。在NEFU＿FDDG和JNU数据集上进行对比试验,分别达到75.14%和94.12%的准确率。设置不同模态数据和知识蒸馏消融实验,证明该方法的科学性。
+综上,本研究针对滚动轴承故障诊断中的域泛化问题,提出了三种创新性的方法。这些方法有效地解决了数据不平衡、无关特征干扰以及单一模态数据的局限性,显著提升了模型在跨域环境中的泛化能力。实验结果表明,所提出的方法能够在不同工况下实现较高的故障诊断精度,并具有良好的适应性和稳定性。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27009/d.cnki.gdblu.2025.000183
+DO 10.27009/d.cnki.gdblu.2025.000183
+
+RT Dissertation/Thesis
+SR 1
+A1 杨军
+A3 安晶;李青祝
+PB 盐城工学院
+T1 基于深度迁移学习的轴承故障诊断方法研究
+CL 硕士
+YR 2025
+IS 09
+K1 轴承故障诊断;迁移学习;领域对抗;领域分离;域分离对抗伪标签
+AB 轴承作为旋转机械的关键部件,其健康状态直接影响设备的安全性和运行效率。然而,实际故障诊断面临三大挑战:一是转速、负载和环境变化导致数据分布差异,引发跨工况分布偏移问题;二是目标域数据标注困难,手动标注成本高;三是传统监督学习方法在跨工况、跨设备任务中泛化能力不足。为此,深度迁移学习被引入轴承故障诊断领域,为解决这些问题提供了新思路。随着深度迁移学习的快速发展,该技术在轴承故障诊断中取得了显著进展,尤其在自动特征提取和预测准确率提升方面表现突出。其中,领域对抗网络和领域分离网络在域适应方法中备受关注。然而,这些方法在跨工况和跨设备诊断中仍存在应用领域受限和稳定性不足等问题。针对这些局限性,本研究通过改进原始领域对抗网络和领域分离网络,提出了三种新型网络方法,具体研究工作如下:
+(1)基于领域对抗网络的轴承故障诊断方法,针对领域对抗网络采用全连接层或浅层卷积网络导致特征提取能力不足、知识迁移困难及泛化能力受限的问题,本研究改进了特征提取器,并重新设计了领域对抗机制和损失函数,提出了一种新型领域对抗卷积网络(DACN)。实验表明,DACN在西储大学轴承数据集和Paderborn轴承数据集的跨工况实验中,平均准确率分别达到96.78%和88.71%,较原始方法性能显著提。
+(2)基于领域分离网络的轴承故障诊断方法,针对领域分离网络在复杂工况下难以充分适应目标域数据特性、忽略关键故障特征导致诊断效果不佳的问题,本研究改进了领域分离网络的基本结构、特征分离机制、损失函数及训练过程,提出了一种新型领域分离迁移网络(DSNQN)。实验结果表明,DSNQN在西储大学轴承数据集和Paderborn轴承数据集的跨工况实验中,平均准确率分别达到93.71%和89.4%,验证了模型的有效性和优越性能。
+(3)基于域分离对抗伪标签网络的轴承故障诊断方法,针对领域对抗网络在跨设备诊断中因域间分布差异大、训练不稳定,以及领域分离网络可能因特征多重性导致错误分类的问题,本研究提出了一种域分离对抗伪标签网络。该方法结合领域对抗和领域分离的优势,重新设计特征提取器,采用卷积与深度神经网络提取特征,并通过梯度反转层减小域间差异。引入伪标签和迭代优化策略,显著提升目标域准确率。实验显示,该方法在西储大学轴承数据集的跨工况实验中准确率达99.9%,在跨设备实验中达95.6%,为跨工况和跨设备诊断提供了高效解决方案。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.44381/d.cnki.gycit.2025.000065
+DO 10.44381/d.cnki.gycit.2025.000065
+
+RT Journal Article
+SR 1
+A1 Shuping Wu;Peiming Shi;Xuefang Xu;Xu Yang;Ruixiong Li;Zijian Qiao
+AD School of Electrical Engineering, Yanshan University, Qinhuangdao, Hebei 066004, PR China;School of Energy and Power Engineering, Xi 'an Jiaotong University, Xi 'an, Shanxi 710048, PR China;School of Mechanical Engineering and Mechanics, Ningbo University, Ningbo, Zhejiang 315211, PR China
+T1 KMDSAN: A novel method for cross-domain and unsupervised bearing fault diagnosis
+JF Knowledge-Based Systems
+YR 2025
+vo 312
+OP 113170-113170
+K1 Cross-domain fault diagnosis;Subdomain alignment;K-means clustering algorithm;Attention mechanism
+AB Cross-domain bearing fault diagnosis is a serious challenge due to the unlabeled dataset. Deep subdomain adaptation network assisted by K-means clustering algorithm (KMDSAN), a diagnosis method based on non-adversarial network and alignment of subdomain, is proposed in this paper. Taking deep subdomain adaptation network (DSAN) as basic framework is the main difference between KMDSAN and most existing methods, because DSAN emphasizes the subdomain alignment rather than global alignment. Additionally, the K-means clustering algorithm is utilized to optimize the local maximum mean discrepancy to improve the performance of DSAN. Finally, a deep network with an improved attention mechanism is designed for the feature extraction of original bearing vibration signal. In comparison to other methods, KMDSAN is concise yet highly effective, and results from two datasets related to bearing demonstrate that the proposed method achieves excellent diagnosis accuracy.
+SN 0950-7051
+DS CNKI
+LK https://link.cnki.net/doi/10.1016/J.KNOSYS.2025.113170
+DO 10.1016/J.KNOSYS.2025.113170
+
+RT Dissertation/Thesis
+SR 1
+A1 朱天伦
+A3 刘鹏
+PB 杭州电子科技大学
+T1 基于对抗蒸馏与Hessian矩阵的轻量级轴承故障诊断方法
+CL 硕士
+YR 2025
+IS 09
+K1 滚动轴承;故障诊断;均匀量化;对抗蒸馏;Hessian矩阵
+AB 在现代工业领域,旋转机械设备广泛应用,滚动轴承作为其关键部件,对设备的稳定运行起着决定性作用。然而,传统的滚动轴承故障诊断技术在处理大数据时存在效率低、成本高的问题,深度学习模型虽有优势,但计算成本和网络参数过多,难以满足实时应用需求。基于此,为了解决现有研究中存在的不足,本文提出了两种创新的轻量级轴承故障诊断方法:
+一方面,针对深度学习模型计算成本高的问题,提出了基于均匀量化与对抗蒸馏的轻量级轴承故障诊断方法(UQAD)。该方法通过构建改进的Res Net18-Ada Ts教师网络,增强了网络的泛化能力;设计轻量级的Small Resnet作为学生网络,减少了网络层数和参数数量,降低了计算复杂度和内存需求,满足了实际应用中对模型轻量化的要求。同时,通过结合对抗训练和知识蒸馏原理,让学生模型在学习教师模型输出的同时,还能抵制对抗性攻击,提高了模型的鲁棒性和泛化能力;应用均匀量化技术,压缩了模型容量和计算量。UQAD方法在跨域故障诊断任务中,能够显著降低模型的存储需求和计算复杂度,使得模型能够在资源受限的设备上高效运行,同时在尽量保持模型性能的前提下,达到与深度网络相似的诊断准确率。
+另一方面,针对均匀量化存在的问题,如没有考虑到神经网络各层的敏感度不同及需要手动设定比特宽度,设计了基于Hessian矩阵的自动量化感知训练轴承故障诊断方法(HAQAT)。该方法利用马尔科夫转移场MTF将一维振动信号转换为二维特征图像,有效保留了信号的时间相关性,为后续的特征提取提供了更丰富的信息;通过计算联合Hessian迹和参数大小的敏感度度量,合理确定学生网络每一层的量化级别,并利用Pareto前沿搜索实现模型大小和精度之间的最优平衡,避免了简单量化导致的精度损失;此外,采用考虑量化转换点的微调策略,将每一层量化映射的比例因子作为可学习参数,结合反向传播和随机梯度下降方法对模型进行微调,使模型在量化后性能能够恢复到接近全精度水平。HAQAT方法在跨域故障诊断任务中,可以自动为神经网络各层设置不同精度,而不像均匀量化一样死板的统一精度,使其在模型容量和精度之间取得了更好的平衡。
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.27075/d.cnki.ghzdc.2025.001649
+DO 10.27075/d.cnki.ghzdc.2025.001649
+
+RT Journal Article
+SR 1
+A1 乔卉卉;赵二贤;郝如江;刘婕;刘帅;王勇超
+AD 石家庄铁道大学机械工程学院;河北省特种设备监督检验研究院;
+T1 基于多尺度CNN与双阶段注意力机制的轴承工况域泛化故障诊断
+JF 振动与冲击
+YR 2025
+IS 02
+vo 44
+OP 267-278
+K1 列车轮对轴承;工况域泛化故障诊断;卷积神经网络(CNN);多尺度特征提取;注意力机制
+AB 变工况条件下，基于深度学习的列车轮对轴承故障诊断模型的训练集与测试集通常来自不同的工况，不同工况振动信号数据分布差异引起的领域漂移问题导致模型准确率降低。基于域适应的变工况轴承故障诊断方法需要获取目标工况域的样本数据参与训练，这在工程实际中难以实现，因此无法实现未知工况的轴承故障诊断。针对以上问题，提出了一种基于多尺度卷积神经网络与双阶段注意力机制网络(two-stage attention multiscale convolutional network model, TSAMCNN)模型的轴承工况域泛化故障诊断方法，其中多尺度特征提取模块从多个尺度上提取时域振动信号中更丰富的故障信息；然后，双阶段注意力模块从通道和空间两个维度自适应地增强故障敏感特征并抑制工况敏感特征和无用特征；最终，提取工况域不变故障特征，从而实现工况域泛化轴承故障诊断。通过变转速和变负载列车轮对轴承故障诊断试验，证明了TSAMCNN模型可提高变工况条件下轴承故障诊断的准确率、抗噪性能和工况域泛化能力。此外，对双阶段注意力机制的权重向量和模型各模块提取的特征进行可视化分析，提高了模型可解释性。
+SN 1000-3835
+CN 31-1316/TU
+LA 中文;
+DS CNKI
+LK https://link.cnki.net/doi/10.13465/j.cnki.jvs.2025.02.027
+DO 10.13465/j.cnki.jvs.2025.02.027
+
+RT Journal Article
+SR 1
+A1 Hao Luo;Xinyue Wang;Li Zhang
+AD College of Information, Liaoning University, Shenyang 110036, China
+T1 Normalization-Guided and Gradient-Weighted Unsupervised Domain Adaptation Network for Transfer Diagnosis of Rolling Bearing Faults Under Class Imbalance
+JF Actuators
+YR 2025
+IS 1
+vo 14
+OP 39-39
+K1 fault diagnosis;unsupervised domain adaptation;class imbalance;rolling bearing
+AB Transfer learning has garnered significant interest in the field of bearing fault diagnosis under varying operational conditions due to its robust generalization capabilities. However, real-world diagnostic scenarios frequently encounter data imbalances, which complicates the learning of the classification boundary for the minority class within the diagnostic model. To address this challenge, we propose a normalization-guided and gradient-weighted unsupervised domain adaptation network (NG-UDAN) for intelligent bearing fault diagnosis, aimed at tackling inter-domain feature shifts and intra-domain category imbalances. Firstly, the proposed network integrates a residual feature extractor with the Domain Normalization (DN) module to enhance domain-invariant feature extraction. Subsequently, the Local Maximum Mean Discrepancy (LMMD) loss is utilized to minimize the conditional distributional differences between the source and target domains. Finally, the Gradient-Weighted Focal Loss (GWFL) is specifically design...
+DS CNKI
+LK https://link.cnki.net/doi/10.3390/ACT14010039
+DO 10.3390/ACT14010039
+
+RT Journal Article
+SR 1
+A1 Feng Xiaoliang;Zhang Zhiwei;Zhao Aiming
+AD School of Electrical Engineering, Shanghai Dianji University, Shanghai, China
+T1 Unsupervised domain adaptation bearing fault diagnosis method based on joint feature alignment
+JF Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science
+YR 2024
+IS 24
+vo 238
+OP 11356-11365
+K1 Fault diagnosis;unsupervised domain adaptation;MB-CMMD;MI;feature alignment
+AB In this paper, the issue of cross-condition fault diagnosis of bearing is studied. During actual operation, the conditions of bearing vary due to changes in factors such as rotation speed and load, and the data distribution between different working conditions varies. Deep learning models that perform well in one condition are not ideal when applied to another condition directly. To address this problem, a novel unsupervised domain adaptation fault diagnosis method based on joint feature alignment is proposed in this paper. 1D-CNN is used as a weight-shared feature extractor to extract the features from both the source and target domains. The discrepancies in marginal and conditional distributions between the source and target domains are comprehensively considered by multi-layer multi-bandwidth Cauchy kernel maximum mean discrepancy (MB-CMMD) and mutual information (MI). The domain drift is reduced by aligning the feature representations of source and target domains. The network after feature alignment demon...
+SN 0954-4062
+DS CNKI
+LK https://link.cnki.net/doi/10.1177/09544062241274178
+DO 10.1177/09544062241274178
+
+RT Journal Article
+SR 1
+A1 Ning Jia;Weiguo Huang;Chuancang Ding;Jun Wang;Zhongkui Zhu
+AD School of Rail Transportation, Soochow University, Suzhou 215131, China;Intelligent Urban Rail Engineering Research Center of Jiangsu Province, Soochow University, Suzhou 215131, China;School of Rail Transportation,Soochow University,Suzhou,215131,China
+T1 Physics-informed unsupervised domain adaptation framework for cross-machine bearing fault diagnosis
+JF Advanced Engineering Informatics
+YR 2024
+IS PC
+vo 62
+OP 102774-102774
+K1 Cross-machine fault diagnosis;Unsupervised domain adaptation;Physics-informed;Hard pseudo-labels;Soft pseudo-labels
+AB Varying components and operating conditions in industrial machines lead to different distribution characteristics and fault states of monitoring data for critical rotating machinery. Adequate and accurate labelling of monitoring data is challenging to achieve. Existing data-driven unsupervised domain adaptation methods exhibit poor interpretability and low confidence in the target domain’s pseudo-labelling. Therefore, a physics-informed unsupervised domain adaptation framework is proposed. Data and physical information are combined to enhance the reliability and interpretability of the model while ensuring its generalization capability. First, physical information is extracted by merging the knowledge of the mechanical component fault characteristics with indicators like the signal spectrum’s energy value. Subsequently, the physical label and loss are created. The physical loss is then embedded in the loss function of the source domain model. Next, by aligning the physical labels and the clustering results of...
+SN 1474-0346
+DS CNKI
+LK https://link.cnki.net/doi/10.1016/J.AEI.2024.102774
+DO 10.1016/J.AEI.2024.102774
+
+RT Journal Article
+SR 1
+A1 Lei Wang;Hang Rao;Zhengcheng Dong;Wenhui Zeng;Fan Xu;Li Jiang;Chao Zhou
+AD School of Mechanical and Electronic Engineering, Wuhan University of Technology, Wuhan, PR China;School of Automation, Wuhan University of Technology, Wuhan, PR China;Institute of Laser and Photonic Engineering, CASIC, Wuhan, PR China
+T1 Automatic fault diagnosis of rolling bearings under multiple working conditions based on unsupervised stack denoising autoencoder
+JF Structural Health Monitoring
+YR 2024
+IS 5
+vo 23
+OP 3084-3104
+K1 Stacked denoising autoencoder;bearing;fault diagnosis;deep learning;automatic
+AB In practical engineering, data often lack labels, resulting in difficulty in fault diagnosis. Because stack-denoising autoencoders possess robust feature extraction capabilities and resistance to interference, an automatic and unsupervised bearing fault diagnosis method based on the stack-denoising autoencoder without an output layer was proposed in this study. As the stacked denoising autoencoder is an unsupervised algorithm, this approach can reduce reliance on manually labeled data labels. Therefore, this study proposed a new method for automatic fault diagnosis. First, the bearing fault features of the rolling bearing were extracted using the stack denoising autoencoder without an output layer. Meanwhile, the dimensions of the features were directly reduced to two or three dimensions by several hidden layers, thereby reducing manual experience. Second, the labels extracted from the clustering model were selected as inputs for different classifier models to automatically identify different types of faults....
+SN 1475-9217
+DS CNKI
+LK https://link.cnki.net/doi/10.1177/14759217231221214
+DO 10.1177/14759217231221214
+
+RT Journal Article
+SR 1
+A1 Chunran Huo;Weiyang Xu;Quansheng Jiang;Yehu Shen;Qixin Zhu;Qingkui Zhang
+AD Suzhou University of Science and Technology, Suzhou, China
+T1 An unsupervised transfer learning approach for rolling bearing fault diagnosis based on dual pseudo-label screening
+JF Structural Health Monitoring
+YR 2024
+IS 4
+vo 23
+OP 2288-2309
+K1 Fault diagnosis;transfer learning;convolutional neural network;pseudo-label
+AB Deep transfer learning is an effective method for unsupervised fault diagnosis of rolling bearings. In some works, the pseudo-label of target domain prediction is used to improve the ability of target domain prediction in transfer learning. However, its validity depends on the quality of pseudo-label generated by the network itself, which is easy to cause the misclassification of the samples. Aiming to this, a dual sample screening (DSS) method based on the information of predicted label changes is proposed in the article, and it is applied to the fault diagnosis of rolling bearings with variable working conditions. DSS combines pre-screening and real-time screening and uses the continuous output of prediction label change information in the training process to improve the network training. It owes to eliminating part of the target domain samples with prediction errors in the stage of network training with pseudo-label. The proposed method improves the stability of the pseudo-label involved in the training an...
+SN 1475-9217
+DS CNKI
+LK https://link.cnki.net/doi/10.1177/14759217231206579
+DO 10.1177/14759217231206579
+
+RT Journal Article
+SR 1
+A1 Wang Haomiao;Li Yibin;Jiang Mingshun;Zhang Faye
+AD Institute of Marine Science and Technology, Shandong University, Qingdao, China;School of Control Sciences and Engineering, Shandong University, Jinan, China
+T1 Multiscale convolutional conditional domain adversarial network with channel attention for unsupervised bearing fault diagnosis
+JF Proceedings of the Institution of Mechanical Engineers
+YR 2024
+IS 6
+vo 238
+OP 1123-1134
+K1 Rolling bearing;fault diagnosis;adversarial domain adaptation;channel attention;convolutional neural network
+AB Unsupervised cross-domain fault diagnosis is an effective technical way to realize the engineering application of bearing fault diagnosis methods. However, there are still two problems that need to be resolved. First, the importance of fault features at different scales is generally not consistent. There is redundant information in the fault features. Second, most methods mainly study how to lessen the marginal distribution difference in source and target domains while ignoring their class information. When the data distribution contains complex multimodal structure, this may lead to failure to capture the multimodal structure. To address the above problems, a multiscale channel attention conditional domain adversarial network is proposed. First, a new channel attention module is designed to assign different weights to different channels, which can highlight valuable features and stamp out superfluous features. Then, conditional domain adversarial is used to fully capture the multimodal structure through cros...
+SN 0959-6518
+DS CNKI
+LK https://link.cnki.net/doi/10.1177/09596518241226461
+DO 10.1177/09596518241226461
+
+RT Journal Article
+SR 1
+A1 Bin Liu;Changfeng Yan;Yaofeng Liu;Ming Lv;Yuan Huang;Lixiao Wu
+AD School of Mechanical and Electronical Engineering, Lanzhou University of Technology, Lanzhou 730050, China
+T1 ISEANet: An interpretable subdomain enhanced adaptive network for unsupervised cross-domain fault diagnosis of rolling bearing
+JF Advanced Engineering Informatics
+YR 2024
+IS PA
+vo 62
+OP 102610-
+K1 Interpretability;Subdomain enhanced adaptive;Cross-domain fault diagnosis;Physical knowledge;Improved local maximum mean discrepancy
+AB Unsupervised Domain Adaptation (UDA) has gained widespread application in bearing fault diagnosis across various operational conditions, attributed to its commendable transfer diagnosis efficacy. However, global Domain Adaptation (DA) under the influence of noise interference often overlooks subdomain distribution, leading to local distinctions among multiple categories. To address these challenges, this paper proposes an Interpretable Subdomain Enhanced Adaptive Network (ISEANet), which enhances subdomain representation from key facets: initial sample processing, intermediate feature mapping, and subdomain discrepancy calculation. Firstly, the Sparse Subsegment-guided Noise Reduction (SSNR) layer is formulated to enhance the physical knowledge. Subsequently, Lightweight Multi-Feature Extraction Module (LMFEMod) is designed to comprehensively capture domain discriminable features from local and global perspectives to enhance the coordinated adaptation and interpretability between physical knowledge and featur...
+SN 1474-0346
+DS CNKI
+LK https://link.cnki.net/doi/10.1016/J.AEI.2024.102610
+DO 10.1016/J.AEI.2024.102610
+
+RT Journal Article
+SR 1
+A1 Jianhua Zhong;Cong Lin;Yang Gao;Jianfeng Zhong;Shuncong Zhong
+AD School of Mechanical Engineering and Automation, Fuzhou University, Fuzhou 350108, PR China;Fujian Provincial Key Laboratory of Terahertz Functional Devices and Intelligent Sensing, Fuzhou University, Fuzhou 350108, PR China
+T1 Fault diagnosis of rolling bearings under variable conditions based on unsupervised domain adaptation method
+JF Mechanical Systems and Signal Processing
+YR 2024
+vo 215
+OP 111430-
+K1 Fault diagnosis;Deep domain adaption;Variable conditions;Rolling bearing
+AB The paper proposes an unsupervised deep convolutional dynamic joint distribution domain adaptive network model for the problem of bearing fault diagnosis under variable conditions, which involves missing labeling of target domain data and large differences in the distribution of source and target domain data. The model consists of the following steps: (1) converting the original vibration signal of the bearing into a time–frequency map representation and performing feature extraction on the labeled source domain samples and the unlabeled target domain samples by the deep convolutional feature extractor; (2) dynamically aligning the marginal distribution and conditional distribution of the two domain features by the marginal distribution adaptation module and the conditional distribution adaptation module, so that the trained network model can classify the unlabeled target domain samples accurately according to the label mapping relationship of the source domain samples; (3) validating the model on two rolling...
+SN 0888-3270
+DS CNKI
+LK https://link.cnki.net/doi/10.1016/J.YMSSP.2024.111430
+DO 10.1016/J.YMSSP.2024.111430
+
+RT Journal Article
+SR 1
+A1 Cuixiang Wang ;Shengkai Wu ;Xing Shao
+T1 Unsupervised domain adaptive bearing fault diagnosis based on maximum domain discrepancy
+JF EURASIP Journal on Advances in Signal Processing
+YR 2024
+IS 1
+vo 2024
+OP 11-11
+AB In the existing domain adaptation-based bearing fault diagnosis methods, the data difference between the source domain and the target domain is not obvious. Besides, parameters of target domain feature extractor gradually approach that of source domain feature extractor to cheat discriminator which results in similar feature distribution of source domain and target domain. These issues make it difficult for the domain adaptation-based bearing fault diagnosis methods to achieve satisfactory performance. An unsupervised domain adaptive bearing fault diagnosis method based on maximum domain discrepancy (UDA-BFD-MDD) is proposed in this paper. In UDA-BFD-MDD, maximum domain discrepancy is exploited to maximize the feature difference between the source domain and target domain, while the output feature of target domain feature extractor can cheat the discriminator. The performance of UDA-BFD-MDD is verified through comprehensive experiments using the bearing dataset of Case Western Reserve University. The experime...
+DS CNKI
+LK https://link.cnki.net/doi/10.1186/S13634-023-01107-X
+DO 10.1186/S13634-023-01107-X
+
+RT Journal Article
+SR 1
+A1 Zheng Bo;Huang Jianhao;Ma Xin;Zhang Xiaoqiang;Zhang Qiang
+AD Institute of Electronic and Electrical Engineering, Civil Aviation Flight University of China, Guanghan, Sichuan 618307, PR China;Southwestern Institute of Physics, Chengdu, Sichuan 610225, PR China;College of Air Traffic Management, Civil Aviation Flight University of China, Guanghan, Sichuan 618307, PR China
+T1 An unsupervised transfer learning method based on SOCNN and FBNN and its application on bearing fault diagnosis
+JF Mechanical Systems and Signal Processing
+YR 2024
+vo 208
+OP 111047-
+K1 Unsupervised transfer learning;Structure optimized convolutional neural network;Maximum mean difference;Batch nuclear-norm maximization;Bearing fault diagnosis
+AB In order to improve the ability of the transfer learning model to diagnose similar fault types of bearings in noisy environments, and reduce the dependence of the model on the labeled fault data, an unsupervised transfer learning method based on structure optimized convolutional neural networks and fast batch nuclear-norm maximization (UTL-SOCNN-FBNM) is designed for solving these problems. The method takes advantage of SOCNN to extract the fault features and classify the fault patterns. Meanwhile, the maximum mean difference (MMD) is designed to improve the distribution similarity between the source domain and the target domain. Furthermore, FBNM is utilized to improve the distinguishability and diversity of the target domain batch output matrix. Finally, this method has been applied into bearing fault diagnosis and compared with some various classic methods under different working conditions, the comparison results show that the proposed method obtains highest diagnostic accuracy in 29 out of 30 experimenta...
+SN 0888-3270
+DS CNKI
+LK https://link.cnki.net/doi/10.1016/J.YMSSP.2023.111047
+DO 10.1016/J.YMSSP.2023.111047
+
+RT Journal Article
+SR 1
+A1 Fan Xu;Duo Hong;Yawen Tian;Naizhen Wei;Jianwei Wu
+AD Polytechnic Institute, Zhejiang University, No.269 Shixiang Road, Gongshu District, Hangzhou, Zhejiang, China.; School of Mechanical Engineering, Zhejiang University, No.866 Yuhangtang Road, Xihu District, Hangzhou, Zhejiang, China.
+T1 Unsupervised Deep Transfer Learning Method for Rolling Bearing Fault Diagnosis Based on Improved Convolutional Neural Network
+JF Journal of Physics: Conference Series
+YR 2024
+IS 1
+vo 2694
+K1 Fault diagnosis;convolutional neural network;joint maximum mean discrepancy;transfer learning.
+AB As a critical component widely used in mechanical equipment, the implementation of intelligent fault diagnosis for rolling bearings can improve the reliability of equipment. In this paper, a method named JMMD-CKDSCNet is proposed to address the task of fault diagnosis under unsupervised domain discrepancy scenarios. First, the convolutional kernel dropout (CKD) mechanism is introduced in the convolutional layer, and partial convolutional kernel weights are set to be inactive during the training process using the random mask. Second, skip connection (SC) fuses the features of multiple shallow layers to preserve and transfer the original features. Finally, domain alignment is achieved using joint maximum mean discrepancy (JMMD), which measures the joint distribution between different domains with feature discrepancies under the condition that the target domain lacks labeled data. The experimental results demonstrate that CKDSCNet exhibits superior generalization performance and outperforms other models in terms...
+SN 1742-6588
+DS CNKI
+LK https://link.cnki.net/doi/10.1088/1742-6596/2694/1/012050
+DO 10.1088/1742-6596/2694/1/012050
+
+RT Journal Article
+SR 1
+A1 Fu Haiyue;Yu Di;Zhan Changshu;Zhu Xiangzhen;Xie Zhijie
+AD College of Mechanical and Electrical Engineering, Northeast Forestry University, Harbin 150042, People’s Republic of China
+T1 Unsupervised rolling bearing fault diagnosis method across working conditions based on multiscale convolutional neural network
+JF Measurement Science and Technology
+YR 2024
+IS 3
+vo 35
+K1 fault diagnosis;rolling bearings;transfer learning;subdomain adaptation;multi-scale feature extraction
+AB In practical engineering, the features of rolling bearing vibration signals often vary in distribution under different working conditions, and obtaining sample labels for target working conditions can be challenging. Therefore, a multi-scale depth subdomain adaptive convolutional neural network (MS-DSACNN) fault diagnosis method is proposed. The MS-DSACNN method is based on a multi-scale feature extraction method combined with an improved 1D-ConvNeXt architecture, which fuses low- and high-level features into multi-scale fault features. A channel attention mechanism is also introduced to adaptively assign weights to the fused multi-scale features. The local maximum mean discrepancy is constructed by extracting features and their corresponding source and pseudo-label inputs for the source and target working conditions, respectively, to construct the loss function for backpropagation. The MS-DSACNN model was evaluated in experiments with two different loads and one variable speed dataset. The experimental resul...
+SN 0957-0233
+DS CNKI
+LK https://link.cnki.net/doi/10.1088/1361-6501/AD15E8
+DO 10.1088/1361-6501/AD15E8
+
+RT Journal Article
+SR 1
+A1 Pang Bin;Liu Qiuhai;Sun Zhenduo;Xu Zhenli;Hao Ziyang
+AD National & Local Joint Engineering Research Center of Metrology Instrument and System, Hebei University, Baoding 071002, China;College of Quality and Technical Supervision, Hebei University, Baoding 071002, China;Department of Mechanical Engineering, North China Electric Power University, Baoding 071003, China;National & Local Joint Engineering Research Center of Metrology Instrument and System College of Quality and Technical Supervision Hebei University Baoding 071002 China
+T1 Time-frequency supervised contrastive learning via pseudo-labeling: An unsupervised domain adaptation network for rolling bearing fault diagnosis under time-varying speeds
+JF Advanced Engineering Informatics
+YR 2024
+vo 59
+OP 102304-
+K1 Time-varying speeds;Contrastive learning;Unsupervised domain adaptation;Rolling bearing;Intelligent diagnosis
+AB The varying speed can cause the significant data distribution shift of bearings, making it difficult for deep learning-based bearing fault diagnosis models to ensure good generalization. Domain adaptation methods have been developed to address the domain shifts, while they struggle with the class-invariant features extraction under variable speed. Accordingly, a time–frequency supervised contrastive learning framework (TF-SupCon) is proposed for unsupervised cross-speed fault diagnosis of bearing. TF-SupCon adopts a pre-training-downstream task framework that aims to extract speed immune class-invariant features. During the pre-training phase, the physical consistency of the time-domain information and the frequency-domain information of bearing signal, a general feature applicable to different speed conditions, is learned in a targeted manner through supervised contrastive learning. Additionally, a K-Nearest Neighbor (KNN) algorithm based on cosine distance is designed to assign pseudo-labels to unlabeled ta...
+SN 1474-0346
+DS CNKI
+LK https://link.cnki.net/doi/10.1016/J.AEI.2023.102304
+DO 10.1016/J.AEI.2023.102304
+
+RT Journal Article
+SR 1
+A1 Huo Tianlong;Deng Linfeng;Zhang Bo;Gong Jun;Hu Baoquan;Zhao Rongzhen;Liu Zheng
+AD School of Mechanical and Electrical Engineering, Lanzhou University of Technology, Lanzhou 730050, People’s Republic of China; School of Electronic Information and Automation, Guilin University of Aerospace Technology, Guilin 541004, People’s Republic of China
+T1 Novel imbalanced subdomain adaption multiscale convolutional network for cross-domain unsupervised fault diagnosis of rolling bearings
+JF Measurement Science and Technology
+YR 2024
+IS 1
+vo 35
+K1 multiscale parallel feature;attention mechanism;subdomain adaptation;unsupervised cross-domain diagnosis
+AB Data on the vibration signals collected from rolling bearings mostly belongs to health conditions, leading to an imbalanced data distribution. In addition, frequent switching of operating conditions results in unlabeled data collected under a specific working condition. This paper proposes a novel network for cross-domain unsupervised fault diagnosis of rolling bearings considering the imbalanced data to address these challenges. First, a multiscale parallel features extraction is developed, which can fully mine the rich high-level feature representation of various fault types from the original data and has a high value for fault identification. Second, a squeeze-and-excitation attention mechanism is constructed to enhance features conducive to model classification and suppress redundant features. Finally, a new loss function is proposed to optimize the model, which can accurately classify imbalanced source domain and easily align related subdomains of two domains. The proposed method was validated on multipl...
+SN 0957-0233
+DS CNKI
+LK https://link.cnki.net/doi/10.1088/1361-6501/AD006A
+DO 10.1088/1361-6501/AD006A
+
+RT Journal Article
+SR 1
+A1 Tang Guiting;Yi Cai;Liu Lei;Xing Zhan;Zhou Qiuyang;Lin Jianhui
+AD State Key Laboratory of Traction Power, Southwest Jiaotong University, Chengdu, 610031, PR China
+T1 Integrating adaptive input length selection strategy and unsupervised transfer learning for bearing fault diagnosis under noisy conditions
+JF Applied Soft Computing
+YR 2023
+vo 148
+K1 Adaptive input length;Envelope demodulation;Anti-noise ability;Unsupervised transfer learning;Cross-domain transfer learning
+AB Transfer learning (TL) has made great progress in intelligent fault diagnosis of bearing. However, due to the harsh working conditions of bearings in engineering practice, in addition to the bearing vibration signals, sensors also inevitably collect noise signals, which leads to the performance degradation of TL. In this paper, a novel model based on TL is proposed to solve the problem. Different from previous studies, an adaptive input length model instead of a fixed input length is established to diagnose bearings with different parameters. A signal processing method combining wide kernels in the first convolutional layer and pooling layer is used to feature denoise the input. Group convolutional and instance normalization based on 1D-CNN are constructed for feature extraction, health conditions classification, and denoise. An optimization objective function based on maximum mean discrepancy is introduced to align the feature distribution discrepancy. The model does not rely on any bearing data label inform...
+SN 1568-4946
+DS CNKI
+LK https://link.cnki.net/doi/10.1016/J.ASOC.2023.110870
+DO 10.1016/J.ASOC.2023.110870
+
+RT Journal Article
+SR 1
+A1 Huo Chunran;Jiang Quansheng;Shen Yehu;Lin Xiaoshan;Zhu Qixin;Zhang Qingkui
+AD School of Mechanical Engineering, Suzhou University of Science and Technology, Suzhou 215009, China
+T1 A class-level matching unsupervised transfer learning network for rolling bearing fault diagnosis under various working conditions
+JF Applied Soft Computing
+YR 2023
+vo 146
+K1 Transfer learning;Fault diagnosis;Maximum classifier discrepancy;Rolling bearing
+AB As an effective method, deep transfer learning is used to solve the problem of unsupervised fault diagnosis of rolling bearings. In the process of obtaining domain invariant features, the feature matching at the domain-level does not consider the distribution of each category in matching the global distribution of source domain features and target domain features. To solve this problem, a class-level matching transfer learning network is proposed. In this method, source domain data and target domain data from different categories are matched first. Meanwhile, domain-level matching and class-level matching are combined based on the maximum classifier discrepancy structure. Then the transfer training process is divided into three stages: domain-level matching, class-level matching, and target domain pseudo-label direct guidance network training. The proposed method utilizes the target domain pseudo-label output by the network to extract the features of the target data by self-directing. Compared with the improv...
+SN 1568-4946
+DS CNKI
+LK https://link.cnki.net/doi/10.1016/J.ASOC.2023.110739
+DO 10.1016/J.ASOC.2023.110739
+
+RT Journal Article
+SR 1
+A1 Zhidan Zhong;Hao Liu;Wentao Mao;Xinghui Xie;Yunhao Cui
+AD College of Mechanical and Electrical Engineering, Henan University of Science and Technology, Luoyang 471023, China;School of Computer and Information Engineering, Henan Normal University, Xinxiang 453007, China;State Key Laboratory of Aerospace Precision Bearings, Luoyang 471000, China
+T1 Rolling Bearing Fault Diagnosis across Operating Conditions Based on Unsupervised Domain Adaptation
+JF Lubricants
+YR 2023
+IS 9
+vo 11
+K1 convolutional auto-encoder;balanced distribution adaption;domain adaptation;cross-condition fault diagnosis
+AB In practical industrial scenarios, mechanical equipment frequently operates within dynamic working conditions. To address the challenge posed by the incongruent data distribution between source and target domains amidst varying operational contexts, particularly in the absence of labels within the target domain, this study presents a solution involving deep feature construction and an unsupervised domain adaptation strategy for rolling bearing fault diagnosis across varying working conditions. The proposed methodology commences by subjecting the original vibration signal of the bearing to a fast Fourier transform (FFT) to extract spectral information. Subsequently, an innovative amalgamation of a one-dimensional convolutional layer and an auto-encoder were introduced to construct a convolutional auto-encoder (CAE) dedicated to acquiring depth features from the spectrum. In a subsequent step, leveraging the depth features gleaned from the convolutional auto-encoder, a balanced distribution adaptation (BDA) mec...
+DS CNKI
+LK https://link.cnki.net/doi/10.3390/LUBRICANTS11090383
+DO 10.3390/LUBRICANTS11090383
+
+RT Journal Article
+SR 1
+A1 Wang Gongxian;Zhang Teng;Hu Zhihui;Zhang Miao
+AD grid.162110.5,0000 0000 9291 3229,School of Transportation and Logistics Engineering,Wuhan University of Technology,Wuhan,Hubei,China
+T1 A Novel Lightweight Unsupervised Multi-branch Domain Adaptation Network for Bearing Fault Diagnosis Under Cross-Domain Conditions
+JF Journal of Failure Analysis and Prevention
+YR 2023
+IS 4
+vo 23
+OP 1645-1662
+K1 Fault diagnosis;Domain adaptation;Adversarial learning;MK-MMD
+AB Cross-domain fault diagnosis methods have been widely developed to solve domain-shift diagnostic tasks with data distribution discrepancies. However, the quality of the domain-invariant features, which was extracted through a single channel, seriously limits the cross-domain diagnostic performance in the existing method. A novel multi-branch domain adaptation network (MBDAN), which incorporate multi-scale average processing into end-to-end deep learning model, is established in this paper. The universal feature extractor with three lightweight branches can capture the fault features from different domains. The domain adaptation strategy, which combines adversarial learning and MK-MMD-based distribution alignment, is built to learn high-quality domain-invariant features. Thus, the well-trained model can implement fault diagnosis on both the labeled source and unlabeled target domain. We conducted a comparison experiment using data from two experimental setups. The results show that MBDAN has a more remarkably ...
+SN 1547-7029
+DS CNKI
+LK https://link.cnki.net/doi/10.1007/S11668-023-01707-7
+DO 10.1007/S11668-023-01707-7
+
+RT Journal Article
+SR 1
+A1 Li Xueyi;Yuan Peng;Wang Xiangkai;Li Daiyou;Xie Zhijie;Kong Xiangwei
+AD College of Mechanical and Electrical Engineering, Northeast Forestry University, Harbin 150040, People’s Republic of China; Key Laboratory of Vibration and Control of Aero-Propulsion System, Ministry of Education, Northeastern University, Shenyang 110819, People’s Republic of China; School of Mechanical Engineering and Automation, Northeastern University, Shenyang 110819, People’s Republic of China
+T1 An unsupervised transfer learning bearing fault diagnosis method based on depthwise separable convolution
+JF Measurement Science and Technology
+YR 2023
+IS 9
+vo 34
+K1 AdaBN;transfer learning;fault diagnosis;bearing fault;depthwise separable convolution
+AB Bearings are an essential component of rotating mechanical equipment. Traditional signal processing-based fault diagnosis methods usually require a massive labeled data for training, but bearings generally operate in the equipment under normal fault-free conditions. This paper proposes an improved adaptive batch normalization (AdaBN) transfer learning bearing fault diagnosis method for batch normalization (BN) in traditional deep learning architecture. The AdaBN network preprocesses the raw vibration signals, and then the preprocessed features are input to a depthwise sparable convolution neural model for training. Features are extracted by depthwise convolution and point convolution in the network. AdaBN can freeze all the parameters in the network except the BN layer. Finally, a small amount of labeled data is classified using transfer learning methods. A laboratory data set was used for validation, and the experimental validation showed that the accuracy of the bearing fault diagnosis method using AdaBN re...
+SN 0957-0233
+DS CNKI
+LK https://link.cnki.net/doi/10.1088/1361-6501/ACDA55
+DO 10.1088/1361-6501/ACDA55
+
+RT Journal Article
+SR 1
+A1 Yao Li;Rui Yang;Hongshu Wang
+AD School of Advanced Technology, Xi’an Jiaotong-Liverpool University, Suzhou 215123, China;College of Engineering, Carnegie Mellon University, San Jose, CA 94035, USA
+T1 Unsupervised Method Based on Adversarial Domain Adaptation for Bearing Fault Diagnosis
+JF Applied Sciences
+YR 2023
+IS 12
+vo 13
+K1 bearing fault diagnosis;adversarial domain adaptation;unsupervised learning;transfer learning;transferability estimation
+AB This paper contributes to improving a bottleneck residual block-based feature extractor as a set of layers for transforming raw data into features for classification. This structure is utilized to avoid the issues of the deep learning network, such as overfitting problems and low computational efficiency caused by redundant computation, high dimensionality, and gradient vanishing. With this structure, a domain adversarial neural network (DANN), a domain adversarial unsupervised model, and a maximum classifier discrepancy (MCD), a domain adaptation model, have been applied to conduct a binary classification of fault diagnosis data. In addition, a pseudo-label is applied to MCD for comparison with the original one. In comparison, several popular models are selected for transferability estimation and analysis. The experimental results have shown that DANN and MCD with this improved feature extractor have achieved high classification accuracy, with 96.84% and 100%, respectively. Meanwhile, after using the pseudo-...
+DS CNKI
+LK https://link.cnki.net/doi/10.3390/APP13127157
+DO 10.3390/APP13127157
+
+RT Journal Article
+SR 1
+A1 Ma Wengang;Zhang Yadong;Ma Liang;Liu Ruiqi;Yan Shan
+AD School of Information Science and Technology, Southwest JiaoTong University, Chengdu 611756, China;School of Automation, Guangxi University of Science and Technology, Liuzhou 545006, China
+T1 An unsupervised domain adaptation approach with enhanced transferability and discriminability for bearing fault diagnosis under few-shot samples
+JF Expert Systems With Applications
+YR 2023
+vo 225
+K1 Bearing fault diagnosis;Enhanced transferability;Enhanced discriminability;MiniNet;Balanced strategy;Discriminant feature learning
+AB As a key component widely used in electric multiple units (EMU), fault diagnosis of EMU bearing is an important link. Typically, labeled data from different conditions provides the most usable domain knowledge. However, many devices face the bottleneck of lacking sufficient labeled data under special conditions, known as few-shot samples distribution. Although unsupervised domain adaptation (UDA) can solve the above problems, existing models achieve sample transfer mainly by learning domain-invariant features in the source and target domains. Moreover, learning domain-invariant features does not necessarily guarantee sufficient discriminability and transferability of the sample. In turn, the samples transfer and the fault discrimination will be greatly affected. In this study, we propose an unsupervised domain adaptation approach with enhanced transferability and discriminability (ETDS-UDA) for bearing fault diagnosis of EMU under few-shot samples. First, we construct an efficient feature extractor (MiniNet) ...
+SN 0957-4174
+DS CNKI
+LK https://link.cnki.net/doi/10.1016/J.ESWA.2023.120084
+DO 10.1016/J.ESWA.2023.120084
+
+RT Journal Article
+SR 1
+A1 Chen Pengfei;Zhao Rongzhen;He Tianjing;Wei Kongyuan;Yuan Jianhui
+AD School of Mechanical and Electrical Engineering, Lanzhou University of Technology, Lanzhou 730050, China;Gansu Agricultural Mechanization Technology Promotion Station, Lanzhou 730046, China
+T1 Unsupervised structure subdomain adaptation based the Contrastive Cluster Center for bearing fault diagnosis
+JF Engineering Applications of Artificial Intelligence
+YR 2023
+vo 122
+K1 Unsupervised structure subdomain adaptation;Bearing fault diagnosis;Contrastive learning
+AB Recently, Unsupervised Domain Adaptation (UDA) as one of the transfer learning can handle the different data distributions and has been utilized in mechanical fault diagnosis under various working conditions successfully. However, most of them have only regarded two distributions as a global domain adaptation and ignored the subdomain adaptation issue, i.e., there is a subdomain distribution discrepancy between the two same categories. Additionally, most marking pseudo label approaches do not consider the influences of noise in pseudo labels. To circumvent the aforementioned challenges, firstly, a dropout trick has been developed and explored to filter the noisy pseudo label for obtaining the higher confident pseudo labels. Furthermore, a novel subdomain alignment method named Contrastive Cluster Center (CCC) has been proposed for pushing away the different domain cluster centers and bringing closer the same domain cluster centers for bridging the subdomain gap. Finally, the findings of the comparative experi...
+SN 0952-1976
+DS CNKI
+LK https://link.cnki.net/doi/10.1016/J.ENGAPPAI.2023.106141
+DO 10.1016/J.ENGAPPAI.2023.106141
+
+RT Journal Article
+SR 1
+A1 Tao Hongfeng;Qiu Jier;Chen Yiyang;Stojanovic Vladimir;Cheng Long
+AD Key Laboratory of Advanced Process Control for Light Industry of Ministry of Education, Jiangnan University, Wuxi 214122, P.R. China;Department of Civil, Maritime and Environmental Engineering, University of Southampton, Southampton, SO16 7QF, United Kingdom;Faculty of Mechanical and Civil Engineering,Department of Automatic Control, Robotics and Fluid Technique, University of Kragujevac, 36000 Kraljevo, Serbia
+T1 Unsupervised cross-domain rolling bearing fault diagnosis based on time-frequency information fusion
+JF Journal of the Franklin Institute
+YR 2023
+IS 2
+vo 360
+OP 1454-1477
+AB In recent years, data-driven methods have been widely used in rolling bearing fault diagnosis with great success, which mainly relies on the same data distribution and massive labeled data. However, bearing equipment is in normal working state for most of the time and operates under variable operating conditions. This makes it difficult to obtain bearing data labels, and the distribution of the collected samples varies widely. To address these problems, an unsupervised cross-domain fault diagnosis method based on time-frequency information fusion is proposed in this paper. Firstly, wavelet packet decomposition and reconstruction are carried out on the bearing vibration signal, and the energy eigenvectors of each sub-band are extracted to obtain a 2-D time-frequency map of fault features. Secondly, an unsupervised cross-domain fault diagnosis model is constructed, the improved maximum mean discrepancy algorithm is used as the measurement standard, and the joint distribution distance is calculated with the help...
+SN 0016-0032
+DS CNKI
+LK https://link.cnki.net/doi/10.1016/J.JFRANKLIN.2022.11.004
+DO 10.1016/J.JFRANKLIN.2022.11.004
+
+RT Journal Article
+SR 1
+A1 Nguyen Duc Thuan;Nguyen Thi Hue;Hoang Si Hong
+T1 Unsupervised Bearing Fault Diagnosis via a Multi-Layer Subdomain Adaptation Network
+JF International Journal of Advanced Computer Science and Applications (IJACSA)
+YR 2023
+IS 5
+vo 14
+K1 Bearing fault;fault diagnosis;domain adaptation;transfer learning
+AB Bearings play a crucial role in the functioning of rotating machinery, making it essential to monitor their condition for maintaining system stability and dependability. In recent years, intelligent diagnostic techniques for bearing issues have made significant progress due to advancements in artificial intelligence. These methods rely heavily on data, requiring data collection and labeling to develop the learning model, which is often highly challenging and nearly infeasible in industrial settings. As a result, a domain adaptation-based transfer learning approach has been suggested. This approach aims to minimize the difference between the distribution of accessible data and the unlabeled real-world data, enabling the model trained on public data to function effectively with actual data. In this paper, we introduce a sophisticated subdomain adaptation technique for cross-machine bearing fault diagnosis using vibration, termed multi-layer subdomain adaptation. Verification experiments were conducted, and the ...
+SN 2156-5570
+DS CNKI
+LK https://link.cnki.net/doi/10.14569/IJACSA.2023.0140557
+DO 10.14569/IJACSA.2023.0140557
