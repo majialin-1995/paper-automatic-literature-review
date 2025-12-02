@@ -21,7 +21,19 @@ def build_argparser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="从文献引用文件生成分层中文综述 Markdown 草稿"
     )
-    parser.add_argument("--input", type=Path, required=True, help="输入的文献文件路径（支持 .ris 等格式）")
+
+    source_group = parser.add_mutually_exclusive_group(required=True)
+    source_group.add_argument(
+        "--input",
+        type=Path,
+        help="输入的文献文件路径（支持 .ris 等格式）",
+    )
+    source_group.add_argument(
+        "--categorized-dir",
+        type=Path,
+        help="按大类拆分的文献文件所在目录，文件名将作为主类名称。",
+    )
+
     parser.add_argument("--out-dir", type=Path, required=True, help="输出目录，将在其中生成 review.md")
     parser.add_argument(
         "--categories",
@@ -88,6 +100,7 @@ def run_cli(args: Optional[argparse.Namespace] = None) -> Path:
     )
     return pipeline.run(
         source=parsed.input,
+        categorized_dir=parsed.categorized_dir,
         out_dir=parsed.out_dir,
         categories_yaml=parsed.categories,
         n_main=parsed.n_main,
