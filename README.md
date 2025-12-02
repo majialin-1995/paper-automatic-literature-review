@@ -35,6 +35,13 @@ python main.py \
   --llm-model deepseek-chat
 
 python main.py --input examples/papers.ris --out-dir runs/review --categories examples/categories.yaml --sort-by-year desc --llm-model deepseek-chat
+
+# 已按大类拆分为多个 RIS/RefWorks 文件时，可让文件名直接作为主类：
+python main.py \\
+  --categorized-dir examples/categorized \\
+  --out-dir runs/review \\
+  --sort-by-year desc \\
+  --llm-model deepseek-chat
 ```
 
 执行完成后，会在 `runs/review/review.md` 中生成分层综述草稿。
@@ -52,6 +59,8 @@ python main.py --input examples/papers.ris --out-dir runs/review --categories ex
 2. **推断类别结构**：若未提供 `categories.yaml`，`paper_review/schema.py` 中的 `LLMSchemaBuilder` 会汇总整个 RIS 内容并调用大模型推导主类/子类名称，必要时可根据 `--n-main/--m-sub` 控制数量。
 3. **自动分类与摘要**：`paper_review/classification.py` 和 `paper_review/summarization/` 下的模型分别调用 LLM 为文献打上主/子类并生成结构化摘要。
 4. **Markdown 导出**：`paper_review/exporters/markdown.py` 将分层信息渲染到 `review.md`。
+
+若提供 `--categorized-dir`，管线会跳过 LLM 分类步骤，直接以目录下各文件的文件名作为主类名称，将该文件中的文献全部归入对应主类。
 
 目前项目仅输出 Markdown 综述，不包含 `.ris` 转 CSV 的列表导出能力；若需要表格形式，可在导出的 `review.md` 基础上自行转换或扩展新的导出器。
 
