@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Dict, List
 
 from .base import BibliographyParser, registry
+from .utils import normalize_authors
 from ..models import PaperEntry
 
 
@@ -59,10 +60,10 @@ class RefWorksParser(BibliographyParser):
 
         papers: List[PaperEntry] = []
         for index, record in enumerate(records):
-            authors: List[str] = []
+            raw_authors: List[str] = []
             for tag in self.AUTHOR_TAGS:
-                authors.extend(record.get(tag, []))
-            authors = [item.strip() for item in authors if item.strip()]
+                raw_authors.extend(record.get(tag, []))
+            authors = normalize_authors(raw_authors)
             first_author = authors[0] if authors else "Unknown"
 
             title_fields: List[str] = []

@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Dict, List
 
 from .base import BibliographyParser, registry
+from .utils import normalize_authors
 from ..models import PaperEntry
 
 
@@ -49,8 +50,8 @@ class RISParser(BibliographyParser):
 
         papers: List[PaperEntry] = []
         for index, record in enumerate(records):
-            authors = record.get("AU", []) + record.get("A1", [])
-            authors = [item.strip() for item in authors if item.strip()]
+            raw_authors = record.get("AU", []) + record.get("A1", [])
+            authors = normalize_authors(raw_authors)
             first_author = authors[0] if authors else "Unknown"
 
             title_fields = record.get("TI", []) + record.get("T1", [])
