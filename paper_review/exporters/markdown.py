@@ -56,7 +56,7 @@ def export_markdown(
 
             items_sorted = sorted(items, key=sort_key, reverse=reverse)
             for paper in items_sorted:
-                lines.append(f"- {paper.summary_zh}")
+                lines.append(f"{paper.summary_zh}")
 
             summary_para = _build_subcategory_summary(heading, items)
             lines.append("\n" + summary_para + "\n")
@@ -68,7 +68,7 @@ def export_markdown(
         lines.append(overview + "\n")
 
         for paper in items_sorted:
-            lines.append(f"- {paper.summary_zh}")
+            lines.append(f"{paper.summary_zh}")
 
         summary_para = _build_subcategory_summary("未指定小类", items_sorted)
         lines.append("\n" + summary_para + "\n")
